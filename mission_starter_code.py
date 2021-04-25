@@ -1,6 +1,6 @@
 # Uncomment when using the realsense camera
-import pyrealsense2.pyrealsense2 as rs  # For (most) Linux and Macs
-# import pyrealsense2 as rs # For Windows
+# import pyrealsense2.pyrealsense2 as rs  # For (most) Linux and Macs
+import pyrealsense2 as rs # For Windows
 import numpy as np
 import logging
 import time
@@ -92,7 +92,7 @@ pipeline = rs.pipeline()
 config = rs.config()
 
 def release_grip(seconds=2):
-    sec=1
+    sec = 1
 
     while sec <= seconds:
         override_gripper_state(GRIPPER_OPEN)
