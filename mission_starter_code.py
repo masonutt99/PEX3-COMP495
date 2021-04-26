@@ -1,5 +1,7 @@
 # Uncomment when using the realsense camera
 # import pyrealsense2.pyrealsense2 as rs  # For (most) Linux and Macs
+import math
+
 import pyrealsense2 as rs # For Windows
 import numpy as np
 import logging
@@ -17,6 +19,8 @@ import os
 import glob
 import shutil
 from pathlib import Path
+import yolo_visdrone.yolo_realsense
+import realsense_object_detect
 
 log = None  # logger instance
 GRIPPER_OPEN = 1087
@@ -167,7 +171,22 @@ def get_ground_distance(height, hypotenuse):
 
     return math.sqrt(hypotenuse**2 - height**2)
 
+def get_new_lat_lon(from_lat, from_lon, heading, distance):
+    earthRadius = 6378.1
+    heading = heading*(math.pi/180)
 
+    lat1 = math.radians(from_lat)
+    lon1 = math.radians(from_lon)
+
+    lat2 = math.asin(math.sin(lat1) * math.cos(distance / earthRadius) +
+                     math.cos(lat1) * math.sin(distance / earthRadius) * math.cos(heading))
+
+    lon2 = lon1 + math.atan2(math.sin(heading) * math.sin(distance / earthRadius) * math.cos(lat1),
+                             math.cos(distance / earthRadius) - math.sin(lat1) * math.sin(lat2))
+    lat2 = math.degrees(lat2)
+    lon2 = math.degrees(lon2)
+
+    return lat2, lon2
 def calc_new_location_to_target(from_lat, from_lon, heading, distance):
 
     from geopy import distance
@@ -185,7 +204,24 @@ def calc_new_location_to_target(from_lat, from_lon, heading, distance):
 
 
 def check_for_initial_target():
-    return None
+    frame = get_cur_frame()
+
+    blurred = cv2.GaussianBlur(frame, (5,5), 0)
+
+    in_weights = 'C:\\Users\\C22Mason.Utt\\Documents\\GitHub\\PEX3-COMP495\\yolo_visdrone\\yolov4-tiny-custom_last.weights'
+    in_config = 'C:\\Users\\C22Mason.Utt\\Documents\\GitHub\\PEX3-COMP495\\yolo_visdrone\\yolov4-tiny-custom.cfg'
+    name_file = 'custom.names'
+
+    net = cv2.dnn.readNetFromDarknet(in_config, in_weights)
+    net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
+    net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
+    layers = net.getLayerNames()
+    output_layers = [layers[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+    # img = np.asanyarray(frame.get_data())
+    classes = "pedestrian"
+    yolo_visdrone.yolo_realsense.detect_annotate(frame, net, classes, output_layers)
+
+    return None, None, (0,0), frame
 
 def determine_drone_actions(last_point, frame, target_sightings):
     return
@@ -298,8 +334,8 @@ def main():
     log.info("PEX 03 start.")
 
     # Connect to the autopilot
-    # drone = drone_lib.connect_device("127.0.0.1:14550", log=log)
-    drone = drone_lib.connect_device("/dev/ttyACM0", baud=115200, log=log)
+    drone = drone_lib.connect_device("127.0.0.1:14550", log=log)
+    # drone = drone_lib.connect_device("/dev/ttyACM0", baud=115200, log=log)
 
     # Create a message listener using the decorator.
     print(f"Finder above ground: {drone.rangefinder.distance}")
@@ -342,3 +378,5 @@ def main():
     except Exception as e:
         log.info(f"Program exception: {traceback.format_exception(*sys.exc_info())}")
         raise
+
+main()
