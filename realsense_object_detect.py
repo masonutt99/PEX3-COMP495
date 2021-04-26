@@ -13,9 +13,9 @@ import pyrealsense2.pyrealsense2 as rs
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-p", "--prototxt", required=True,
-                help="path to Caffe 'deploy' prototxt file")
+                help="yolo_visdrone/yolov4-tiny-custom.cfg")
 ap.add_argument("-m", "--model", required=True,
-                help="path to Caffe pre-trained model")
+                help="yolo_visdrone/yolov4-tiny-custom_last.weights")
 ap.add_argument("-c", "--confidence", type=float, default=0.2,
                 help="minimum probability to filter weak detections")
 
