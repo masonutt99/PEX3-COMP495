@@ -134,6 +134,7 @@ def start_camera_stream():
     profile = pipeline.start(config)
 
 
+
 def get_cur_frame(attempts=5, flip_v=False):
     # Wait for a coherent pair of frames: depth and color
     tries = 0
@@ -208,9 +209,9 @@ def check_for_initial_target():
 
     blurred = cv2.GaussianBlur(frame, (5,5), 0)
 
-    in_weights = 'C:\\Users\\C22Mason.Utt\\Documents\\GitHub\\PEX3-COMP495\\yolo_visdrone\\yolov4-tiny-custom_last.weights'
-    in_config = 'C:\\Users\\C22Mason.Utt\\Documents\\GitHub\\PEX3-COMP495\\yolo_visdrone\\yolov4-tiny-custom.cfg'
-    name_file = 'custom.names'
+    in_weights = 'C:\\Users\\C22Alexander.Fitzger\\PycharmProjects\\CS495Pex03\\yolo_visdrone\\yolov4-tiny-custom_last.weights'
+    in_config = 'C:\\Users\\C22Alexander.Fitzger\\PycharmProjects\\CS495Pex03\\yolo_visdrone\\yolov4-tiny-custom.cfg'
+    name_file = 'C:\\Users\\C22Alexander.Fitzger\\PycharmProjects\\CS495Pex03\\yolo_visdrone\\custom.names'
 
     net = cv2.dnn.readNetFromDarknet(in_config, in_weights)
     net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)

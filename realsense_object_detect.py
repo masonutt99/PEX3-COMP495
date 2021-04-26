@@ -83,7 +83,7 @@ def main():
     print("[INFO] loading model...")
 
     # for now, just directly supply args here...
-    net = cv2.dnn.readNetFromCaffe("MobileNetSSD_deploy.prototxt.txt", "MobileNetSSD_deploy.caffemodel")
+    net = cv2.dnn.readNetFromCaffe("C:\\Users\\C22Alexander.Fitzger\\PycharmProjects\\CS495Pex03\\MobileNetSSD_deploy.prototxt.txt", "C:\\Users\\C22Alexander.Fitzger\\PycharmProjects\\CS495Pex03\\MobileNetSSD_deploy.caffemodel")
     # net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
 
     # initialize the video stream, allow the camera sensor to warm up,
