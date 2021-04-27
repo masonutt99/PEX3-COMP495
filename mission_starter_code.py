@@ -131,7 +131,7 @@ def start_camera_stream():
 
     # Start streaming
     logging.info("Starting camera streams...")
-    profile = pipeline.start(config)
+    pipeline.start(config)
 
 
 
@@ -208,6 +208,8 @@ def check_for_initial_target():
     frame = get_cur_frame()
 
     blurred = cv2.GaussianBlur(frame, (5,5), 0)
+
+
 
     in_weights = 'C:\\Users\\C22Alexander.Fitzger\\PycharmProjects\\CS495Pex03\\yolo_visdrone\\yolov4-tiny-custom_last.weights'
     in_config = 'C:\\Users\\C22Alexander.Fitzger\\PycharmProjects\\CS495Pex03\\yolo_visdrone\\yolov4-tiny-custom.cfg'
