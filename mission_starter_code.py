@@ -19,6 +19,8 @@ import os
 import glob
 import shutil
 from pathlib import Path
+
+import fg_camera_sim
 import yolo_visdrone.yolo_realsense
 import realsense_object_detect
 
@@ -90,10 +92,11 @@ last_obj_alt = None
 last_obj_heading = None
 last_point = None  # center point in pixels
 
+#TODO Uncomment below for realsense
 # Uncomment below when using actual realsense camera
 # Configure realsense camera stream
-pipeline = rs.pipeline()
-config = rs.config()
+# pipeline = rs.pipeline()
+# config = rs.config()
 
 def release_grip(seconds=2):
     sec = 1
@@ -126,12 +129,13 @@ def clear_path(path):
 
 
 def start_camera_stream():
+    #TODO Uncomment below for RS
     logging.info("configuring rgb stream.")
-    config.enable_stream(rs.stream.color, 640, 480, rs.format.rgb8, 30)
+    #config.enable_stream(rs.stream.color, 640, 480, rs.format.rgb8, 30)
 
     # Start streaming
     logging.info("Starting camera streams...")
-    pipeline.start(config)
+    #pipeline.start(config)
 
 
 
@@ -139,27 +143,29 @@ def get_cur_frame(attempts=5, flip_v=False):
     # Wait for a coherent pair of frames: depth and color
     tries = 0
 
+    #TODO comment below for RS
     # This will capture the frames from the simulator.
     # If using an actual camera, comment out the two lines of
     # code below and replace with code that returns a single frame
     # from your camera.
-    # image = fg_camera_sim.get_cur_frame()
-    # return cv2.resize(image, (int(FRAME_HORIZONTAL_CENTER * 2), int(FRAME_VERTICAL_CENTER * 2)))
+    image = fg_camera_sim.get_cur_frame()
+    return cv2.resize(image, (int(FRAME_HORIZONTAL_CENTER * 2), int(FRAME_VERTICAL_CENTER * 2)))
 
+    #TODO uncomment for RS
     # Code below can be used with the realsense camera...
-    while tries <= attempts:
-        try:
-            frames = pipeline.wait_for_frames()
-            rgb_frame = frames.get_color_frame()
-            rgb_frame = np.asanyarray(rgb_frame.get_data())
-
-            if flip_v:
-                rgb_frame = cv2.flip(rgb_frame, 0)
-            return rgb_frame
-        except Exception:
-            print(Exception)
-
-        tries += 1
+    # while tries <= attempts:
+    #     try:
+    #         frames = pipeline.wait_for_frames()
+    #         rgb_frame = frames.get_color_frame()
+    #         rgb_frame = np.asanyarray(rgb_frame.get_data())
+    #
+    #         if flip_v:
+    #             rgb_frame = cv2.flip(rgb_frame, 0)
+    #         return rgb_frame
+    #     except Exception:
+    #         print(Exception)
+    #
+    #     tries += 1
 
 def get_ground_distance(height, hypotenuse):
 
