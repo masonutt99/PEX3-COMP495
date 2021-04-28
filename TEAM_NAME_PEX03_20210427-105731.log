@@ -1,0 +1,48 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (26a3a02c)
+INFO:autopilot:C22MKUTT
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.016
+INFO:__main__:Current altitude: 0.234
+INFO:__main__:Current altitude: 0.917
+INFO:__main__:Current altitude: 1.763
+INFO:__main__:Current altitude: 2.746
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 3.805
+INFO:__main__:Current altitude: 4.909
+INFO:__main__:Current altitude: 6.043
+INFO:__main__:Current altitude: 7.202
+INFO:__main__:Current altitude: 8.377
+INFO:__main__:Current altitude: 9.567
+INFO:__main__:Current altitude: 10.768
+INFO:__main__:Current altitude: 11.98
+INFO:__main__:Current altitude: 13.196
+INFO:__main__:Current altitude: 14.42
+INFO:__main__:Current altitude: 15.647
+INFO:__main__:Current altitude: 16.845
+INFO:__main__:Current altitude: 17.916
+INFO:__main__:Current altitude: 18.751
+INFO:__main__:Current altitude: 19.294
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 Takeoff
+INFO:autopilot:Mission: 2 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Starting camera feed...
+INFO:root:configuring rgb stream.
+INFO:root:Starting camera streams...
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "C:/Users/C22Mason.Utt/Documents/GitHub/PEX3-COMP495/mission_starter_code.py", line 412, in <module>\n    conduct_mission()\n', '  File "C:/Users/C22Mason.Utt/Documents/GitHub/PEX3-COMP495/mission_starter_code.py", line 273, in conduct_mission\n    center, confidence, (x, y), radius, frame_display, bbox \\\n', 'TypeError: cannot unpack non-iterable NoneType object\n']

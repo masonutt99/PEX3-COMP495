@@ -1,0 +1,48 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (26a3a02c)
+INFO:autopilot:C22MKUTT
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.007
+INFO:__main__:Current altitude: 0.007
+INFO:__main__:Current altitude: 0.007
+INFO:__main__:Current altitude: 0.021
+INFO:__main__:Current altitude: 0.293
+INFO:__main__:Current altitude: 0.99
+INFO:__main__:Current altitude: 1.852
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.844
+INFO:__main__:Current altitude: 3.908
+INFO:__main__:Current altitude: 5.014
+INFO:__main__:Current altitude: 6.151
+INFO:__main__:Current altitude: 7.312
+INFO:__main__:Current altitude: 8.493
+INFO:__main__:Current altitude: 9.684
+INFO:__main__:Current altitude: 10.887
+INFO:__main__:Current altitude: 12.097
+INFO:__main__:Current altitude: 13.315
+INFO:__main__:Current altitude: 14.536
+INFO:__main__:Current altitude: 15.761
+INFO:__main__:Current altitude: 16.95
+INFO:__main__:Current altitude: 18.006
+INFO:__main__:Current altitude: 18.815
+INFO:__main__:Current altitude: 19.333
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 Takeoff
+INFO:autopilot:Mission: 2 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Starting camera feed...
+INFO:root:configuring rgb stream.
+INFO:root:Starting camera streams...
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "C:/Users/C22Mason.Utt/Documents/GitHub/PEX3-COMP495/mission_starter_code.py", line 418, in <module>\n    conduct_mission()\n', '  File "C:/Users/C22Mason.Utt/Documents/GitHub/PEX3-COMP495/mission_starter_code.py", line 287, in conduct_mission\n    logging.info(f"(Potential) target acquired @"\n', "TypeError: 'int' object is not subscriptable\n"]

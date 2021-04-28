@@ -1,0 +1,3 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+WARNING:dronekit:Link timeout, no heartbeat in last 5 seconds

@@ -24,10 +24,16 @@ import fg_camera_sim
 import yolo_visdrone.yolo_realsense
 import realsense_object_detect
 
+global drone
+global log
+global frame_w, frame_h
 log = None  # logger instance
 GRIPPER_OPEN = 1087
 GRIPPER_CLOSED = 1940
 gripper_state = GRIPPER_CLOSED # assume gripper is closed by default
+CONF_THRESH, NMS_THRESH = 0.05, 0.3
+
+
 
 IMG_SNAPSHOT_PATH = '/dev/drone_data/mission_data/cam_pex003'
 IMG_WRITE_RATE = 10  # write every 10 frames to disk...
@@ -95,8 +101,8 @@ last_point = None  # center point in pixels
 #TODO Uncomment below for realsense
 # Uncomment below when using actual realsense camera
 # Configure realsense camera stream
-# pipeline = rs.pipeline()
-# config = rs.config()
+pipeline = rs.pipeline()
+config = rs.config()
 
 def release_grip(seconds=2):
     sec = 1
@@ -131,12 +137,17 @@ def clear_path(path):
 def start_camera_stream():
     #TODO Uncomment below for RS
     logging.info("configuring rgb stream.")
-    #config.enable_stream(rs.stream.color, 640, 480, rs.format.rgb8, 30)
+    config.enable_stream(rs.stream.color, 640, 480, rs.format.rgb8, 30)
 
     # Start streaming
     logging.info("Starting camera streams...")
-    #pipeline.start(config)
+    pipeline.start(config)
 
+    #added
+    profile = pipeline.get_active_profile()
+    image_profile = rs.video_stream_profile(profile.get_stream(rs.stream.color))
+    image_intrinsics = image_profile.get_intrinsics()
+    frame_w, frame_h = image_intrinsics.width, image_intrinsics.height
 
 
 def get_cur_frame(attempts=5, flip_v=False):
@@ -148,24 +159,24 @@ def get_cur_frame(attempts=5, flip_v=False):
     # If using an actual camera, comment out the two lines of
     # code below and replace with code that returns a single frame
     # from your camera.
-    image = fg_camera_sim.get_cur_frame()
-    return cv2.resize(image, (int(FRAME_HORIZONTAL_CENTER * 2), int(FRAME_VERTICAL_CENTER * 2)))
+    # image = fg_camera_sim.get_cur_frame()
+    # return cv2.resize(image, (int(FRAME_HORIZONTAL_CENTER * 2), int(FRAME_VERTICAL_CENTER * 2)))
 
     #TODO uncomment for RS
     # Code below can be used with the realsense camera...
-    # while tries <= attempts:
-    #     try:
-    #         frames = pipeline.wait_for_frames()
-    #         rgb_frame = frames.get_color_frame()
-    #         rgb_frame = np.asanyarray(rgb_frame.get_data())
-    #
-    #         if flip_v:
-    #             rgb_frame = cv2.flip(rgb_frame, 0)
-    #         return rgb_frame
-    #     except Exception:
-    #         print(Exception)
-    #
-    #     tries += 1
+    while tries <= attempts:
+        try:
+            frames = pipeline.wait_for_frames()
+            rgb_frame = frames.get_color_frame()
+            rgb_frame = np.asanyarray(rgb_frame.get_data())
+
+            if flip_v:
+                rgb_frame = cv2.flip(rgb_frame, 0)
+            return rgb_frame
+        except Exception:
+            print(Exception)
+
+        tries += 1
 
 def get_ground_distance(height, hypotenuse):
 
@@ -210,27 +221,47 @@ def calc_new_location_to_target(from_lat, from_lon, heading, distance):
     return destination.latitude, destination.longitude
 
 
-def check_for_initial_target():
-    frame = get_cur_frame()
+def check_for_initial_target(frame_display, net, classes):
 
-    blurred = cv2.GaussianBlur(frame, (5,5), 0)
+    myColor = (20, 20, 230)
+
+    blob = cv2.dnn.blobFromImage(frame_display, 0.00392, (192, 192), swapRB=False, crop=False)
+
+    net.setInput(blob)
+    layer_outputs = net.forward(output_layers)
+
+    class_ids, confidences, b_boxes = [], [], []
+    for output in layer_outputs:
+        for detection in output:
+            scores = detection[5:]
+            class_id = np.argmax(scores)
+            confidence = scores[class_id]
+            if confidence > CONF_THRESH:
+                center_x, center_y, w, h = \
+                    (detection[0:4] * np.array([frame_w, frame_h, frame_w, frame_h])).astype('int')
+                x = int(center_x - w / 2)
+                y = int(center_y - h / 2)
+
+                b_boxes.append([x, y, int(w), int(h)])
+                confidences.append(float(confidence))
+                class_ids.append(int(class_id))
+            else:
+                center_x = 0
+                center_y = 0
+                x = 0
+                y = 0
+    # center = None
+    # confidence = None
+    # x = 0
+    # y = 0
+    radius = 10
+    # frame_display = frame_display
+    # bbox = 0
+    return (center_x, center_y), confidence, (x, y), radius, frame_display, b_boxes
 
 
 
-    in_weights = 'C:\\Users\\C22Alexander.Fitzger\\PycharmProjects\\CS495Pex03\\yolo_visdrone\\yolov4-tiny-custom_last.weights'
-    in_config = 'C:\\Users\\C22Alexander.Fitzger\\PycharmProjects\\CS495Pex03\\yolo_visdrone\\yolov4-tiny-custom.cfg'
-    name_file = 'C:\\Users\\C22Alexander.Fitzger\\PycharmProjects\\CS495Pex03\\yolo_visdrone\\custom.names'
-
-    net = cv2.dnn.readNetFromDarknet(in_config, in_weights)
-    net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
-    net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
-    layers = net.getLayerNames()
-    output_layers = [layers[i[0] - 1] for i in net.getUnconnectedOutLayers()]
-    # img = np.asanyarray(frame.get_data())
-    classes = "pedestrian"
-    yolo_visdrone.yolo_realsense.detect_annotate(frame, net, classes, output_layers)
-
-    return None, None, (0,0), frame
+    return None
 
 def determine_drone_actions(last_point, frame, target_sightings):
     return
@@ -248,6 +279,7 @@ def conduct_mission():
     logging.info("Starting camera feed...")
     start_camera_stream()
 
+    object_identified = False
     while drone.armed:  # While the drone's mission is executing...
 
         if drone.mode == "RTL":
@@ -262,9 +294,18 @@ def conduct_mission():
         last_alt = location.alt
         last_heading = drone.heading
 
-        # look for a target in current frame
-        center, radius, (x, y), frame = check_for_initial_target()
+        frame = get_cur_frame()
+        frame_display = frame.copy()
 
+
+        if not object_identified:
+            # look for a target in current frame
+            center, confidence, (x, y), radius, frame_display, bbox \
+                = check_for_initial_target(frame_display, net, classes)
+            object_identified = True
+
+            if not confidence:
+                object_identified = False
         if center is not None:
 
             logging.info(f"(Potential) target acquired @"
@@ -285,7 +326,7 @@ def conduct_mission():
                 last_obj_heading = last_heading
 
             # TODO: draw bounding box around potential target in the current frame...
-            cv2.rectangle(frame, (x,y), (x+radius, y+radius))
+            cv2.rectangle(frame, (x, y), (x+radius, y+radius), (20, 20, 230), 2)
 
         else:
             # We have no target in the current frame.
@@ -327,10 +368,31 @@ def conduct_mission():
 
         counter += 1
 
-def main():
-    global drone
-    global log
+if __name__ == '__main__':
 
+
+    in_weights = 'yolo_visdrone/yolov4-tiny-custom_last.weights'
+    in_config = 'yolo_visdrone/yolov4-tiny-custom.cfg'
+    name_file = 'yolo_visdrone/custom.names'
+
+    """
+    load names
+    """
+    with open(name_file, "r") as f:
+        classes = [line.strip() for line in f.readlines()]
+
+    print(classes)
+
+    """
+    Load the network
+    """
+    net = cv2.dnn.readNetFromDarknet(in_config, in_weights)
+    net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
+    net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
+    layers = net.getLayerNames()
+    output_layers = [layers[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+
+    # config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
     # Setup a log file for recording important activities during our session.
     log_file = time.strftime("TEAM_NAME_PEX03_%Y%m%d-%H%M%S") + ".log"
 
@@ -359,7 +421,7 @@ def main():
     log.info("Looking for mission to execute...")
     if drone.commands.count < 1:
         log.info("No mission to execute.")
-        return
+        exit()
 
     # Arm the drone.
     drone_lib.arm_device(drone, log=log)
@@ -388,4 +450,3 @@ def main():
         log.info(f"Program exception: {traceback.format_exception(*sys.exc_info())}")
         raise
 
-main()
