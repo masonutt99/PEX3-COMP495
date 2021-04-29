@@ -49,16 +49,16 @@ def create_tracker(tracker_type='CSRT'):
     if tracker_type == 'MOSSE':
         tracker = cv2.TrackerMOSSE_create()
     if tracker_type == "CSRT":
-        tracker = cv2.TrackerCSRT_create()
-
+        # tracker = cv2.TrackerCSRT_create()
+        tracker = cv2.TrackerMIL_create()
     return tracker
 
 def load_visdrone_network():
     global visdrone_net, output_layers, visdrone_classes
 
-    in_weights = 'yolo_visdron/yolov4-tiny-custom_last.weights'
-    in_config = 'yolo_visdron/yolov4-tiny-custom.cfg'
-    name_file = 'yolo_visdron/custom.names'
+    in_weights = 'yolo_visdrone/yolov4-tiny-custom_last.weights'
+    in_config = 'yolo_visdrone/yolov4-tiny-custom.cfg'
+    name_file = 'yolo_visdrone/custom.names'
     # in_weights = 'yolov4-tiny-custom_last.weights'
     # in_config = 'yolov4-tiny-custom.cfg'
     # name_file = 'custom.names'
@@ -279,9 +279,11 @@ def set_object_to_track(frame, bbox, bbox_margin=25):
 
     # On some platforms, the tracker reset doesn't work,
     # so we need to create a new instance here.
-    create_tracker(DEFAULT_TRACKER_TYPE)
+    tracker = create_tracker(DEFAULT_TRACKER_TYPE)
 
-    tracker.clear()
+    tracker
+
+
     if bbox_margin <= 0:
         tracker.init(frame, bbox)
     else:
