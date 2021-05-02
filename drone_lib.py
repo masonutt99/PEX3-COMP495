@@ -6,13 +6,50 @@ import sys
 import socket
 import logging
 
+MAV_FRAME_BODY_FRD = 12
 
-def log_activity (msg, log=None):
 
+def log_activity(msg, log=None):
     if log is None:
-        print(msg)
+        logging.info(msg)
     else:
         log.info(msg)
+
+
+def small_move_forward(device, velocity=0.5, duration=1):
+    """
+    Moves drone forward by a small amount.
+    To move by a larger amount, set velocity and/or duration to something bigger.
+    """
+    velocity = abs(velocity)
+    send_body_frame_velocities(device, velocity, 0, 0.0, duration)
+
+
+def small_move_back(device, velocity=0.5, duration=1):
+    """
+    Moves drone backward by a small amount.
+    To move by a larger amount, set velocity and/or duration to something bigger.
+    """
+    velocity = -abs(velocity)
+    send_body_frame_velocities(device, velocity, 0, 0.0, duration)
+
+
+def small_move_right(device, velocity=0.5, duration=1):
+    """
+    Moves drone right by a small amount.
+    To move by a larger amount, set velocity and/or duration to something bigger.
+    """
+    velocity = abs(velocity)
+    send_body_frame_velocities(device, 0, velocity, 0.0, duration)
+
+
+def small_move_left(device, velocity=0.5, duration=1):
+    """
+    Moves drone left by a small amount.
+    To move by a larger amount, set velocity and/or duration to something bigger.
+    """
+    velocity = -abs(velocity)
+    send_body_frame_velocities(device, 0, velocity, 0.0, duration)
 
 
 def move_local(device, x, y, z, duration=1, log=None):
