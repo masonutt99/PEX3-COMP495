@@ -23,7 +23,7 @@ FRAME_WIDTH = int(640)
 rnd_background = np.random.randint(0, 256, size=(FRAME_HEIGHT, FRAME_WIDTH, 3)).astype('uint8')
 
 total_track_misses = 0
-TRACKER_MISSES_MAX = 60
+TRACKER_MISSES_MAX = 35
 confirmed_object_tracking = False
 
 tracker = None
@@ -49,8 +49,8 @@ def create_tracker(tracker_type='CSRT'):
     if tracker_type == 'MOSSE':
         tracker = cv2.TrackerMOSSE_create()
     if tracker_type == "CSRT":
-        # tracker = cv2.TrackerCSRT_create()
-        tracker = cv2.TrackerMIL_create()
+        tracker = cv2.TrackerCSRT_create()
+        # tracker = cv2.TrackerMIL_create()
     return tracker
 
 def load_visdrone_network():
@@ -281,7 +281,7 @@ def set_object_to_track(frame, bbox, bbox_margin=25):
     # so we need to create a new instance here.
     tracker = create_tracker(DEFAULT_TRACKER_TYPE)
 
-    tracker
+
 
 
     if bbox_margin <= 0:

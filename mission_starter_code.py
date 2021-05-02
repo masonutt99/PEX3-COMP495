@@ -1,8 +1,8 @@
 # Uncomment when using the realsense camera
-# import pyrealsense2.pyrealsense2 as rs  # For (most) Linux and Macs
+import pyrealsense2.pyrealsense2 as rs  # For (most) Linux and Macs
 import math
 
-import pyrealsense2 as rs # For Windows
+# import pyrealsense2 as rs # For Windows
 import numpy as np
 import logging
 import time
@@ -173,8 +173,8 @@ def get_cur_frame(attempts=5, flip_v=False):
             if flip_v:
                 rgb_frame = cv2.flip(rgb_frame, 0)
             return rgb_frame
-        except Exception:
-            print(Exception)
+        except Exception as e:
+            print(e)
 
         tries += 1
 
