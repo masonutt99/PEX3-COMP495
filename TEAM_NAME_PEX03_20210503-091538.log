@@ -1,0 +1,121 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.026
+INFO:__main__:Current altitude: 0.15
+INFO:__main__:Current altitude: 1.019
+INFO:__main__:Current altitude: 1.578
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.875
+INFO:__main__:Current altitude: 3.574
+INFO:__main__:Current altitude: 5.015
+INFO:__main__:Current altitude: 6.143
+INFO:__main__:Current altitude: 7.296
+INFO:__main__:Current altitude: 8.478
+INFO:__main__:Current altitude: 9.667
+INFO:__main__:Current altitude: 10.863
+INFO:__main__:Current altitude: 12.072
+INFO:__main__:Current altitude: 13.294
+INFO:__main__:Current altitude: 14.515
+INFO:__main__:Current altitude: 15.737
+INFO:__main__:Current altitude: 16.924
+INFO:__main__:Current altitude: 17.973
+INFO:__main__:Current altitude: 18.786
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3216061, -157.9237744, 1, 11.345...
+INFO:__main__:Current altitude: 10.915
+INFO:__main__:Current lat: 21.3215841
+INFO:root:Current lon: (-157.9237616, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9620978404583516,0.9999989681827955, 0.999999918948239
+INFO:__main__:Current altitude: 10.569
+INFO:__main__:Current lat: 21.3215535
+INFO:root:Current lon: (-157.9237439, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9315998237108859,0.9999975330188657, 0.9999998068688509
+INFO:__main__:Current altitude: 10.47
+INFO:__main__:Current lat: 21.3215311
+INFO:root:Current lon: (-157.9237311, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9228735125605994,0.9999964824413486, 0.9999997258170901
+INFO:__main__:Current altitude: 10.437
+INFO:__main__:Current lat: 21.32152
+INFO:root:Current lon: (-157.9237248, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9199647421771705,0.9999959618426681, 0.9999996859244266
+INFO:__main__:Current altitude: 10.451
+INFO:__main__:Current lat: 21.3215207
+INFO:root:Current lon: (-157.9237252, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.921198765976201,0.9999959946732155, 0.999999688457294
+INFO:__main__:Current altitude: 10.522
+INFO:__main__:Current lat: 21.3215297
+INFO:root:Current lon: (-157.9237297, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9274570295284266,0.9999964167802536, 0.9999997169520537
+INFO:__main__:Current altitude: 10.606
+INFO:__main__:Current lat: 21.3215396
+INFO:root:Current lon: (-157.9237334, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.934861172322609,0.9999968810979958, 0.9999997403810784
+INFO:__main__:Current altitude: 10.701
+INFO:__main__:Current lat: 21.3215477
+INFO:root:Current lon: (-157.9237363, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9432349052446012,0.9999972609943301, 0.999999758744368
+INFO:__main__:Current altitude: 10.79
+INFO:__main__:Current lat: 21.3215544
+INFO:root:Current lon: (-157.9237394, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9510797708241515,0.9999975752295696, 0.9999997783740912
+INFO:__main__:Current altitude: 10.875
+INFO:__main__:Current lat: 21.321562
+INFO:root:Current lon: (-157.9237432, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9585720581754076,0.999997931675513, 0.9999998024363327
+INFO:__main__:Current altitude: 10.963
+INFO:__main__:Current lat: 21.3215703
+INFO:root:Current lon: (-157.9237471, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9663287791978844,0.9999983209520037, 0.9999998271317913
+INFO:__main__:Current altitude: 11.05
+INFO:__main__:Current lat: 21.3215787
+INFO:root:Current lon: (-157.923751, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9739973556632878,0.9999987149185726, 0.9999998518272496
+INFO:__main__:Current altitude: 11.138
+INFO:__main__:Current lat: 21.321587
+INFO:root:Current lon: (-157.9237547, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9817540766857646,0.9999991041950634, 0.9999998752562741
+INFO:__main__:Current altitude: 11.228
+INFO:__main__:Current lat: 21.3215953
+INFO:root:Current lon: (-157.9237584, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9896870868223886,0.9999994934715541, 0.9999998986852988
+INFO:__main__:Current altitude: 11.304
+INFO:__main__:Current lat: 21.3216031
+INFO:root:Current lon: (-157.9237619, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9963860731599823,0.999999859297654, 0.9999999208478896
+INFO:root:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:root:Device mode = VehicleMode:AUTO.
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.321248, -157.9239411, 1, 10.001...
+INFO:__main__:Current altitude: 10.003
+INFO:__main__:Current lat: 21.3212384
+INFO:root:Current lon: (-157.9239632, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 1.0001999800019998,0.9999995497449304, 1.0000001399407832
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 754, in <module>\n    conduct_mission()\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 664, in conduct_mission\n    determine_drone_actions((last_lat, last_lon), frm_display, target_sightings, x, y, radius)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 695, in determine_drone_actions\n    new_lat, new_lon = calc_new_location_to_target(last_obj_lat, last_obj_lon, last_obj_heading, distance)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 171, in calc_new_location_to_target\n    kilometers=(float(distance * .001))).destination(origin, heading)\n', "TypeError: unsupported operand type(s) for *: 'module' and 'float'\n"]

@@ -1,0 +1,133 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.03
+INFO:__main__:Current altitude: 0.359
+INFO:__main__:Current altitude: 1.053
+INFO:__main__:Current altitude: 1.926
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.918
+INFO:__main__:Current altitude: 3.988
+INFO:__main__:Current altitude: 4.536
+INFO:__main__:Current altitude: 6.341
+INFO:__main__:Current altitude: 7.117
+INFO:__main__:Current altitude: 8.68
+INFO:__main__:Current altitude: 9.47
+INFO:__main__:Current altitude: 11.075
+INFO:__main__:Current altitude: 11.879
+INFO:__main__:Current altitude: 13.494
+INFO:__main__:Current altitude: 14.313
+INFO:__main__:Current altitude: 15.942
+INFO:__main__:Current altitude: 16.734
+INFO:__main__:Current altitude: 18.131
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3213226, -157.9238684, 1, 19.991...
+INFO:__main__:Current altitude: 19.993
+INFO:__main__:Current lat: 21.321302
+INFO:root:Current lon: (-157.9238869, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 1.000100045020259,0.9999990338310439, 1.0000001171450534
+INFO:root:Goto point: 21.321103886388556, -157.92410370636688, 0.2, 3...
+INFO:root:Current altitude: 20.001
+INFO:root:Current lat: 21.32126
+INFO:root:Current lon: (-157.9239681, None)
+INFO:root:Relative position to destination: 6.667000000000001,1.000007322022925, 0.9999991413193825
+INFO:root:Current altitude: 19.888
+INFO:root:Current lat: 21.3212596
+INFO:root:Current lon: (-157.9239686, None)
+INFO:root:Relative position to destination: 6.629333333333334,1.0000073032621704, 0.9999991444854603
+INFO:root:Current altitude: 19.162
+INFO:root:Current lat: 21.3212546
+INFO:root:Current lon: (-157.9239731, None)
+INFO:root:Relative position to destination: 6.387333333333333,1.0000070687527365, 0.9999991729801607
+INFO:root:Current altitude: 17.937
+INFO:root:Current lat: 21.3212437
+INFO:root:Current lon: (-157.9239831, None)
+INFO:root:Relative position to destination: 5.979,1.000006557522171, 0.9999992363017167
+INFO:root:Current altitude: 16.552
+INFO:root:Current lat: 21.3212302
+INFO:root:Current lon: (-157.9239955, None)
+INFO:root:Relative position to destination: 5.517333333333333,1.0000059243466997, 0.9999993148204464
+INFO:root:Current altitude: 15.105
+INFO:root:Current lat: 21.3212164
+INFO:root:Current lon: (-157.9240077, None)
+INFO:root:Relative position to destination: 5.035,1.0000052771006624, 0.9999993920727449
+INFO:root:Current altitude: 13.635
+INFO:root:Current lat: 21.3212031
+INFO:root:Current lon: (-157.9240196, None)
+INFO:root:Relative position to destination: 4.545,1.0000046533055686, 0.9999994674253968
+INFO:root:Current altitude: 12.184
+INFO:root:Current lat: 21.3211903
+INFO:root:Current lon: (-157.9240311, None)
+INFO:root:Relative position to destination: 4.061333333333333,1.0000040529614183, 0.9999995402451863
+INFO:root:Current altitude: 10.76
+INFO:root:Current lat: 21.3211776
+INFO:root:Current lon: (-157.9240426, None)
+INFO:root:Relative position to destination: 3.5866666666666664,1.0000034573074563, 0.9999996130649759
+INFO:root:Current altitude: 9.466
+INFO:root:Current lat: 21.3211661
+INFO:root:Current lon: (-157.9240531, None)
+INFO:root:Relative position to destination: 3.155333333333333,1.0000029179357586, 0.9999996795526099
+INFO:root:Current altitude: 8.067
+INFO:root:Current lat: 21.3211534
+INFO:root:Current lon: (-157.9240646, None)
+INFO:root:Relative position to destination: 2.689,1.0000023222817969, 0.9999997523723995
+INFO:root:Current altitude: 6.682
+INFO:root:Current lat: 21.3211408
+INFO:root:Current lon: (-157.924076, None)
+INFO:root:Relative position to destination: 2.2273333333333336,1.0000017313180236, 0.9999998245589735
+INFO:root:Current altitude: 5.296
+INFO:root:Current lat: 21.3211281
+INFO:root:Current lon: (-157.9240875, None)
+INFO:root:Relative position to destination: 1.7653333333333334,1.000001135664062, 0.999999897378763
+INFO:root:Current altitude: 3.988
+INFO:root:Current lat: 21.3211156
+INFO:root:Current lon: (-157.9240989, None)
+INFO:root:Relative position to destination: 1.3293333333333333,1.0000005493904773, 0.9999999695653369
+INFO:root:Current altitude: 3.321
+INFO:root:Current lat: 21.3211066
+INFO:root:Current lon: (-157.924107, None)
+INFO:root:Relative position to destination: 1.107,1.0000001272734966, 1.0000000208557973
+INFO:root:Current altitude: 3.124
+INFO:root:Current lat: 21.3211045
+INFO:root:Current lon: (-157.9241086, None)
+INFO:root:Relative position to destination: 1.0413333333333334,1.0000000287795345, 1.0000000309872465
+INFO:root:Goto point: 21.3211062, -157.9241073, 0.1, 2.5...
+INFO:root:Current altitude: 3.029
+INFO:root:Current lat: 21.3211062
+INFO:root:Current lon: (-157.9241073, None)
+INFO:root:Relative position to destination: 1.2116,1.0, 1.0
+INFO:root:Current altitude: 2.902
+INFO:root:Current lat: 21.3211057
+INFO:root:Current lon: (-157.9241082, None)
+INFO:root:Relative position to destination: 1.1608,0.9999999765490593, 1.00000000569894
+INFO:root:Current altitude: 2.632
+INFO:root:Current lat: 21.321106
+INFO:root:Current lon: (-157.9241088, None)
+INFO:root:Relative position to destination: 1.0528,0.9999999906196237, 1.000000009498233
+INFO:root:Changing device mode from VehicleMode:GUIDED to RTL...
+INFO:root:Device mode = VehicleMode:RTL.
+INFO:__main__:Disarming device...
+INFO:__main__:End of demonstration.

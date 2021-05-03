@@ -284,3 +284,11 @@ def return_to_launch(device, log):
             log_activity("Device has landed.", log)
             break
         time.sleep(.5)
+
+# def waitInPlace(device, lat, lon, alt, time, log=None):
+#     log_activity("Staying in location", log)
+#     device.airspeed = .1
+#     point = LocationGlobalRelative(lat, lon, alt)
+#     while device.armed \
+#             and device.mode == "GUIDED":
+#         device.simple_goto(point)

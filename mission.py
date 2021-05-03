@@ -144,13 +144,16 @@ def get_new_lat_lon(from_lat, from_lon, heading, distance):
     lat1 = math.radians(from_lat)
     lon1 = math.radians(from_lon)
 
-    lat2 = math.asin(math.sin(lat1) * math.cos(distance / earthRadius) +
-                     math.cos(lat1) * math.sin(distance / earthRadius) * math.cos(heading))
+    lat2 = math.asin(math.sin(lat1) * math.cos((distance*0.001) / earthRadius) +
+                     math.cos(lat1) * math.sin((distance*0.001) / earthRadius) * math.cos(heading))
 
-    lon2 = lon1 + math.atan2(math.sin(heading) * math.sin(distance / earthRadius) * math.cos(lat1),
-                             math.cos(distance / earthRadius) - math.sin(lat1) * math.sin(lat2))
+    lon2 = lon1 + math.atan2(math.sin(heading) * math.sin((distance*0.001) / earthRadius) * math.cos(lat1),
+                             math.cos((distance*0.001) / earthRadius) - math.sin(lat1) * math.sin(lat2))
     lat2 = math.degrees(lat2)
     lon2 = math.degrees(lon2)
+
+    print(lat2)
+    print(lon2)
 
     return lat2, lon2
 
@@ -448,124 +451,7 @@ def clear_path(path):
 
 
 def conduct_mission():
-    # # Here, we will loop until we find a human target and deliver the care package,
-    # # or until the drone's flight plan completes (and we land).
-    # logging.info("Searching for target...")
-    #
-    # target_sightings = 0
-    # global counter, mission_mode, last_point, last_obj_lon, \
-    #     last_obj_lat, last_obj_alt, \
-    #     last_obj_heading, target_circle_radius
-    #
-    # logging.info("Starting camera feed...")
-    # # start_camera_stream()
-    # # load_visdrone_network()
-    # object_identified = False
-    #
-    # while drone.armed:  # While the drone's mission is executing...
-    #
-    #     if drone.mode == "RTL":
-    #         mission_mode = MISSION_MODE_RTL
-    #         logging.info("RTL mode activated.  Mission ended.")
-    #         break
-    #
-    #     # take a snapshot of current location
-    #     location = drone.location.global_relative_frame
-    #     last_lon = location.lon
-    #     last_lat = location.lat
-    #     last_alt = location.alt
-    #     last_heading = drone.heading
-    #
-    #     frame = get_cur_frame()
-    #     frame_display = frame.copy()
-    #     cv2.imshow("Real-time Detect", frame_display)
-    #
-    #     if not object_identified:
-    #         # look for a target in current frame
-    #         center, confidence, (x, y), radius, frame_display, bbox \
-    #             = check_for_initial_target(frame_display)
-    #         # = check_for_initial_target(frame_display, visdrone_net, visdrone_classes)
-    #         if confidence is not None \
-    #                 and confidence > .2:
-    #             object_identified = True
-    #             set_object_to_track(frame, bbox)
-    #
-    #     else:
-    #         print("tracking")
-    #         tracker.update()
-    #         # center, confidence, (x, y), radius, frame_display, bbox \
-    #         #     = track_with_confirm(frame_display)
-    #         # if not confidence:
-    #         #     object_identified = False
-    #     # if center is not None:
-    #     #
-    #     #     logging.info(f"(Potential) target acquired @"
-    #     #                  f"({center[0], center[1]}) with radius {radius}.")
-    #     #
-    #     #     target_sightings += 1
-    #
-    #         # We're looking for a person/pedestrian...
-    #         # last_point = center
-    #
-    #         # if mission_mode == MISSION_MODE_SEEK:
-    #         #     logging.info(f"Locking in on lat {last_lat}, lon {last_lon}, "
-    #         #                  f"alt {last_alt}, heading {last_heading}.")
-    #         #
-    #             last_obj_lon = last_lon
-    #             last_obj_lat = last_lat
-    #             last_obj_alt = last_alt
-    #             last_obj_heading = last_heading
-    #
-    #         # TODO: draw bounding box around potential target in the current frame...
-    #         # cv2.rectangle(frame, (x, y), (x + radius, y + radius), (20, 20, 230), 2)
-    #         # if ((x + (x + radius) / 2)) > (frame_w / 2):
-    #         #     drone_lib.small_move_left(drone)
-    #         # if ((x + (x + radius) / 2)) < (frame_w / 2):
-    #         #     drone_lib.small_move_right(drone)
-    #         # if ((y + (y + radius) / 2)) > (frame_h / 2):
-    #         #     drone_lib.small_move_back(drone)
-    #         # if ((y + (y + radius) / 2)) < (frame_h / 2):
-    #         #     drone_lib.small_move_forward(drone)
-    #     # else:
-    #     #     We have no target in the current frame.
-    #         # logging.info("No target found; continuing search...")
-    #         # cv2.putText(frame, "Scanning for target...", (10, 400), font, 1, (255, 0, 0), 2, cv2.LINE_AA)
-    #         # target_sightings = 0  # reset target sighting
-    #         # last_point = None
-    #
-    #     # Time to adjust drone's position?
-    #     # if (counter % UPDATE_RATE) == 0 \
-    #     #         or mission_mode != MISSION_MODE_SEEK:
-    #         # determine drone's next actions (if any)
-    #
-    #         # determine_drone_actions(last_point, frame, target_sightings)
-    #
-    #     # Display information in windowed frame:
-    #     # cv2.putText(frame, direction1, (10, 30), font, 1, (255, 0, 0), 2, cv2.LINE_AA)
-    #     # cv2.putText(frame, direction2, (10, 60), font, 1, (255, 0, 0), 2, cv2.LINE_AA)
-    #
-    #     # Draw (blue) marker in center of frame that indicates the
-    #     # drone's relative position to the target
-    #     # (assuming camera is centered under the drone).
-    #     # cv2.circle(frame,
-    #     #            (int(FRAME_HORIZONTAL_CENTER), int(FRAME_VERTICAL_CENTER)),
-    #     #            10, (255, 0, 0), -1)
-    #
-    #     # Now, show stats for informational purposes only
-    #     # cv2.imshow("Real-time Detect", frame)
-    #     # if (counter % IMG_WRITE_RATE) == 0:
-    #     #     cv2.imwrite(f"{IMG_SNAPSHOT_PATH}/frm_{counter}.png", frame)
-    #
-    #     # key = cv2.waitKey(1) & 0xFF
-    #
-    #     # if the `q` key was pressed, break from the loop
-    #     # if key == ord("q"):
-    #     #    break
-    #
-    #     if mission_mode == MISSION_MODE_RTL:
-    #         break  # mission is over.
-    #
-    #     counter += 1
+
     logging.info("Searching for target...")
 
     target_sightings = 0
@@ -612,19 +498,22 @@ def conduct_mission():
                     drone_lib.change_device_mode(drone, "GUIDED")
                 # while drone.location.global_relative_frame.lat != last_lat and drone.location.global_relative_frame.lon != last_lon:
                 drone_lib.goto_point(drone, last_lat, last_lon, 1, last_alt, log=log)
+                ogbbox = bbox
         else:
+            # if drone.mode == "LOITER":
+            #     break
             if drone.mode != "GUIDED":
                 drone_lib.change_device_mode(drone, "GUIDED")
             center, confidence, (x, y), radius, frm_display, bbox \
                 = track_with_confirm(frm_display)
-            if movements < 15:
-                if (x + (x + radius) / 2) < (FRAME_WIDTH / 2):
+            if movements < 45:
+                if (bbox[0] + int(bbox[2]/2)) < (FRAME_WIDTH / 2):
                     drone_lib.small_move_left(drone)
                     movements = movements + 1
                 else:
                     drone_lib.small_move_right(drone)
                     movements = movements + 1
-                if (y + (y + radius) / 2) > (FRAME_HEIGHT / 2):
+                if (bbox[1] + int(bbox[3]/2)) > (FRAME_HEIGHT / 2):
                     drone_lib.small_move_back(drone)
                     movements = movements + 1
                 else:
@@ -658,16 +547,32 @@ def conduct_mission():
         if key == ord("q"):
             break
         if target_sightings > 60:
-            determine_drone_actions((last_lat, last_lon), frm_display, target_sightings, x, y, radius)
+            determine_drone_actions((last_lat, last_lon), frm_display, target_sightings, ogbbox)
+            break
 
+    # while True:
+    # drone_lib.goto_point(drone, drone.location.global_relative_frame.lat, drone.location.global_relative_frame.lon, speed=.2, alt=8)
+    time.sleep(2)
+    drone_lib.goto_point(drone,  drone.location.global_relative_frame.lat, drone.location.global_relative_frame.lon, speed=.1, alt=2.5)
+    release_grip(2)
 
-def get_hypotenuse(img, x, y, radius):
+    drone_lib.change_device_mode(drone, "RTL")
+
+def get_hypotenuse(img, bbox):
     # ret, thresh = cv2.threshold(img, x, y, cv2.THRESH_BINARY_INV)
     # num_pixels = cv2.countNonZero(thresh)
-    num_pixels = ((x + radius) - x) * ((y + radius) - y)
-    dist_ratio = drone.location.global_relative_frame.alt / 7.646
-    pix_ratio = 0.01065
-    hypo = num_pixels * (pix_ratio * dist_ratio)
+    # num_pixels = ((x + radius) - x) * ((y + radius) - y)
+
+    num_pixels = bbox[2] * bbox[3]
+    print("num_pixels")
+    print(num_pixels)
+
+    heightRat = (drone.location.global_relative_frame.alt*.01)
+    dist_ratio1 = (drone.location.global_relative_frame.alt / 7.646)* heightRat
+
+    # dist_ratio = .16795
+    pix_ratio = .01065
+    hypo = num_pixels * (pix_ratio * dist_ratio1 )
     return hypo
 
 
@@ -682,14 +587,22 @@ def get_ground_distance(height, hypotenuse):
     return math.sqrt(hypotenuse ** 2 - height ** 2)
 
 
-def determine_drone_actions(last_point, frame, target_sightings, x, y, radius):
+def determine_drone_actions(last_point, frame, target_sightings, bbox):
     if target_sightings >= 60:
-        hypo = get_hypotenuse(frame, x, y, radius)
+        hypo = get_hypotenuse(frame, bbox)
+        print("hypo")
+        print(hypo)
+        # hypo = 1.5*drone.location.global_relative_frame.alt
         distance = get_ground_distance(drone.location.global_relative_frame.alt, hypo)
-        new_lat, new_lon = calc_new_location_to_target(last_obj_lat, last_obj_lon, last_obj_heading, distance)
-        # new_lat, new_lon = get_new_lat_lon(last_obj_lat, last_obj_lon, last_obj_heading, distance)
-        drone_lib.goto_point(drone, new_lat, new_lon, speed=1, alt=5)
 
+        print("distance")
+        print(distance)
+        # new_lat, new_lon = calc_new_location_to_target(last_obj_lat, last_obj_lon, last_obj_heading, distance)
+        new_lat, new_lon = get_new_lat_lon(last_obj_lat, last_obj_lon, last_obj_heading, distance)
+        drone_lib.goto_point(drone, new_lat, new_lon, speed=.2, alt=3)
+        # drone_lib.change_device_mode(drone, "LOITER")
+
+#
 
 if __name__ == '__main__':
 

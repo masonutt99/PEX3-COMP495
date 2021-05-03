@@ -1,0 +1,106 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.0
+INFO:__main__:Current altitude: 0.0
+INFO:__main__:Current altitude: 0.0
+INFO:__main__:Current altitude: 0.022
+INFO:__main__:Current altitude: 0.158
+INFO:__main__:Current altitude: 1.052
+INFO:__main__:Current altitude: 1.615
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.917
+INFO:__main__:Current altitude: 3.618
+INFO:__main__:Current altitude: 5.334
+INFO:__main__:Current altitude: 6.481
+INFO:__main__:Current altitude: 7.644
+INFO:__main__:Current altitude: 8.821
+INFO:__main__:Current altitude: 10.014
+INFO:__main__:Current altitude: 11.223
+INFO:__main__:Current altitude: 12.435
+INFO:__main__:Current altitude: 13.649
+INFO:__main__:Current altitude: 14.874
+INFO:__main__:Current altitude: 16.094
+INFO:__main__:Current altitude: 17.261
+INFO:__main__:Current altitude: 18.247
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3211354, -157.9241337, 1, 19.869...
+INFO:__main__:Current altitude: 19.75
+INFO:__main__:Current lat: 21.3211408
+INFO:root:Current lon: (-157.9241273, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9940107705470834,1.000000253269814, 0.9999999594742118
+INFO:root:Goto point: 21.321072149578157, -157.92425479142352, 1, 5...
+INFO:root:Current altitude: 19.701
+INFO:root:Current lat: 21.3212095
+INFO:root:Current lon: (-157.924102, None)
+INFO:root:Relative position to destination: 3.9402,1.0000064420035202, 0.9999990325018553
+INFO:root:Current altitude: 19.583
+INFO:root:Current lat: 21.321209
+INFO:root:Current lon: (-157.9241026, None)
+INFO:root:Relative position to destination: 3.9166,1.000006418552542, 0.999999036301145
+INFO:root:Current altitude: 18.915
+INFO:root:Current lat: 21.3212042
+INFO:root:Current lon: (-157.9241077, None)
+INFO:root:Relative position to destination: 3.783,1.0000061934231503, 0.9999990685951078
+INFO:root:Current altitude: 18.056
+INFO:root:Current lat: 21.3211967
+INFO:root:Current lon: (-157.9241156, None)
+INFO:root:Relative position to destination: 3.6112,1.0000058416584763, 0.9999991186190892
+INFO:root:Current altitude: 16.521
+INFO:root:Current lat: 21.3211818
+INFO:root:Current lon: (-157.9241314, None)
+INFO:root:Relative position to destination: 3.3042000000000002,1.0000051428193233, 0.9999992186670522
+INFO:root:Current altitude: 15.085
+INFO:root:Current lat: 21.3211679
+INFO:root:Current lon: (-157.9241464, None)
+INFO:root:Relative position to destination: 3.0170000000000003,1.0000044908821268, 0.9999993136492956
+INFO:root:Current altitude: 13.63
+INFO:root:Current lat: 21.3211545
+INFO:root:Current lon: (-157.9241611, None)
+INFO:root:Relative position to destination: 2.726,1.0000038623959089, 0.999999406731894
+INFO:root:Current altitude: 12.184
+INFO:root:Current lat: 21.3211414
+INFO:root:Current lon: (-157.9241753, None)
+INFO:root:Relative position to destination: 2.4368,1.0000032479802776, 0.9999994966484178
+INFO:root:Current altitude: 10.768
+INFO:root:Current lat: 21.3211286
+INFO:root:Current lon: (-157.9241891, None)
+INFO:root:Relative position to destination: 2.1536,1.0000026476352337, 0.9999995840320817
+INFO:root:Current altitude: 9.204
+INFO:root:Current lat: 21.3211142
+INFO:root:Current lon: (-157.9242045, None)
+INFO:root:Relative position to destination: 1.8408000000000002,1.000001972247059, 0.9999996815471849
+INFO:root:Current altitude: 7.825
+INFO:root:Current lat: 21.3211014
+INFO:root:Current lon: (-157.9242181, None)
+INFO:root:Relative position to destination: 1.565,1.0000013719020149, 0.9999997676644188
+INFO:root:Current altitude: 6.461
+INFO:root:Current lat: 21.3210885
+INFO:root:Current lon: (-157.9242318, None)
+INFO:root:Relative position to destination: 1.2922,1.0000007668667752, 0.9999998544148677
+INFO:root:Current altitude: 5.498
+INFO:root:Current lat: 21.3210772
+INFO:root:Current lon: (-157.924244, None)
+INFO:root:Relative position to destination: 1.0996000000000001,1.000000236874666, 0.9999999316670922
+INFO:root:Changing device mode from VehicleMode:GUIDED to LOITER...
+INFO:root:Device mode = VehicleMode:LOITER.
+INFO:root:Goto point: 21.3210738, -157.9242477, 1, 3...
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 759, in <module>\n    conduct_mission()\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 669, in conduct_mission\n    drone_lib.goto_point(drone_lib, drone.location.global_relative_frame.lat, drone.location.global_relative_frame.lon, speed=1, alt=3)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/drone_lib.py", line 251, in goto_point\n    device.simple_goto(point)\n', "AttributeError: module 'drone_lib' has no attribute 'simple_goto'\n"]
