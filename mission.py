@@ -664,7 +664,7 @@ def conduct_mission():
 def get_hypotenuse(img, x, y, radius):
     # ret, thresh = cv2.threshold(img, x, y, cv2.THRESH_BINARY_INV)
     # num_pixels = cv2.countNonZero(thresh)
-    num_pixels = (x + radius) * (y + radius)
+    num_pixels = ((x + radius) - x) * ((y + radius) - y)
     dist_ratio = drone.location.global_relative_frame.alt / 7.646
     pix_ratio = 0.01065
     hypo = num_pixels * (pix_ratio * dist_ratio)
