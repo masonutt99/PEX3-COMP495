@@ -1,0 +1,53 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.017
+INFO:__main__:Current altitude: 0.251
+INFO:__main__:Current altitude: 0.925
+INFO:__main__:Current altitude: 1.77
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.566
+INFO:__main__:Current altitude: 3.974
+INFO:__main__:Current altitude: 4.705
+INFO:__main__:Current altitude: 6.212
+INFO:__main__:Current altitude: 6.987
+INFO:__main__:Current altitude: 8.551
+INFO:__main__:Current altitude: 9.341
+INFO:__main__:Current altitude: 10.942
+INFO:__main__:Current altitude: 11.746
+INFO:__main__:Current altitude: 13.366
+INFO:__main__:Current altitude: 14.178
+INFO:__main__:Current altitude: 15.81
+INFO:__main__:Current altitude: 16.609
+INFO:__main__:Current altitude: 18.034
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Starting camera feed...
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:autopilot:Reached command #3
+INFO:autopilot:Mission: 4 RTL
+INFO:autopilot:SIM Hit ground at 0.483153 m/s
+INFO:autopilot:Disarming motors
+INFO:__main__:Disarming device...
+INFO:__main__:End of demonstration.

@@ -1,0 +1,55 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.006
+INFO:__main__:Current altitude: 0.006
+INFO:__main__:Current altitude: 0.006
+INFO:__main__:Current altitude: 0.018
+INFO:__main__:Current altitude: 0.287
+INFO:__main__:Current altitude: 0.969
+INFO:__main__:Current altitude: 1.823
+INFO:__main__:Current altitude: 2.805
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 3.868
+INFO:__main__:Current altitude: 4.966
+INFO:__main__:Current altitude: 6.098
+INFO:__main__:Current altitude: 7.252
+INFO:__main__:Current altitude: 8.434
+INFO:__main__:Current altitude: 9.618
+INFO:__main__:Current altitude: 10.817
+INFO:__main__:Current altitude: 12.023
+INFO:__main__:Current altitude: 13.247
+INFO:__main__:Current altitude: 14.468
+INFO:__main__:Current altitude: 15.554
+INFO:__main__:Current altitude: 17.124
+INFO:__main__:Current altitude: 17.826
+INFO:__main__:Current altitude: 18.898
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3210101, -157.9240333, 1, 9.995...
+INFO:__main__:Current altitude: 9.996
+INFO:__main__:Current lat: 21.3210202
+INFO:root:Current lon: (-157.9240595, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 1.0001000500250126,1.00000047371114, 1.000000165902551
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 717, in <module>\n    conduct_mission()\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 631, in conduct_mission\n    determine_drone_actions((last_lat, last_lon), frm_display, target_sightings)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 656, in determine_drone_actions\n    hypo = get_hypotenuse(frame)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 635, in get_hypotenuse\n    ret, thresh = cv2.threshold(img)\n', "TypeError: Required argument 'thresh' (pos 2) not found\n"]

@@ -1,0 +1,63 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.012
+INFO:__main__:Current altitude: 0.417
+INFO:__main__:Current altitude: 0.876
+INFO:__main__:Current altitude: 2.011
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.67
+INFO:__main__:Current altitude: 3.802
+INFO:__main__:Current altitude: 4.897
+INFO:__main__:Current altitude: 6.026
+INFO:__main__:Current altitude: 7.179
+INFO:__main__:Current altitude: 8.353
+INFO:__main__:Current altitude: 9.541
+INFO:__main__:Current altitude: 10.74
+INFO:__main__:Current altitude: 11.95
+INFO:__main__:Current altitude: 13.169
+INFO:__main__:Current altitude: 14.391
+INFO:__main__:Current altitude: 15.618
+INFO:__main__:Current altitude: 16.814
+INFO:__main__:Current altitude: 17.887
+INFO:__main__:Current altitude: 18.722
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:__main__:Goto point: 21.3210773, -157.9242086, 1, 9.998...
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:root:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 3 WP
+INFO:root:Device mode = VehicleMode:AUTO.
+INFO:__main__:Goto point: 21.3212618, -157.9244914, 1, 9.992...
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:root:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 3 WP
+INFO:root:Device mode = VehicleMode:AUTO.
+INFO:__main__:Goto point: 21.321261, -157.9244918, 1, 9.991...
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 687, in <module>\n    conduct_mission()\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 597, in conduct_mission\n    if (x + (x + radius) / 2) < (FRAME_WIDTH / 2):\n', "TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'\n"]

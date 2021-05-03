@@ -1,0 +1,45 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.004
+INFO:__main__:Current altitude: 0.004
+INFO:__main__:Current altitude: 0.004
+INFO:__main__:Current altitude: 0.011
+INFO:__main__:Current altitude: 0.479
+INFO:__main__:Current altitude: 0.928
+INFO:__main__:Current altitude: 2.088
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.757
+INFO:__main__:Current altitude: 4.174
+INFO:__main__:Current altitude: 4.91
+INFO:__main__:Current altitude: 6.018
+INFO:__main__:Current altitude: 7.181
+INFO:__main__:Current altitude: 8.351
+INFO:__main__:Current altitude: 9.538
+INFO:__main__:Current altitude: 10.735
+INFO:__main__:Current altitude: 11.952
+INFO:__main__:Current altitude: 13.163
+INFO:__main__:Current altitude: 14.384
+INFO:__main__:Current altitude: 15.607
+INFO:__main__:Current altitude: 16.809
+INFO:__main__:Current altitude: 17.88
+INFO:__main__:Current altitude: 18.713
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Starting camera feed...
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 612, in <module>\n    conduct_mission()\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 463, in conduct_mission\n    if not object_identified:\n', "UnboundLocalError: local variable 'object_identified' referenced before assignment\n"]

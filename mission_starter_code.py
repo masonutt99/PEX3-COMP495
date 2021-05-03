@@ -178,6 +178,14 @@ def get_cur_frame(attempts=5, flip_v=False):
 
         tries += 1
 
+def get_hypotenuse(img):
+
+    ret, thresh = cv2.threshold(img)
+    num_pixels = cv2.countNonZero(thresh)
+    dist_ratio = drone.location.global_relative_frame.alt / 7.646
+    pix_ratio = 0.01065
+    hypo = num_pixels * (pix_ratio * dist_ratio)
+    return hypo
 def get_ground_distance(height, hypotenuse):
 
     import math

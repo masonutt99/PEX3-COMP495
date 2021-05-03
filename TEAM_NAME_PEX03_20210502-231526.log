@@ -1,0 +1,84 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.01
+INFO:__main__:Current altitude: 0.371
+INFO:__main__:Current altitude: 0.823
+INFO:__main__:Current altitude: 1.942
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.596
+INFO:__main__:Current altitude: 4.004
+INFO:__main__:Current altitude: 4.737
+INFO:__main__:Current altitude: 6.24
+INFO:__main__:Current altitude: 7.014
+INFO:__main__:Current altitude: 8.575
+INFO:__main__:Current altitude: 9.366
+INFO:__main__:Current altitude: 10.962
+INFO:__main__:Current altitude: 11.768
+INFO:__main__:Current altitude: 13.386
+INFO:__main__:Current altitude: 14.2
+INFO:__main__:Current altitude: 15.837
+INFO:__main__:Current altitude: 16.632
+INFO:__main__:Current altitude: 18.049
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3209755, -157.9239377, 1, 19.981...
+INFO:__main__:Current altitude: 19.985
+INFO:__main__:Current lat: 21.3209841
+INFO:root:Current lon: (-157.9239625, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 1.0002001901806716,1.000000403358655, 1.0000001570376242
+INFO:root:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 3 WP
+INFO:root:Device mode = VehicleMode:AUTO.
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3210099, -157.9241156, 1, 19.992...
+INFO:__main__:Current altitude: 19.995
+INFO:__main__:Current lat: 21.3210145
+INFO:root:Current lon: (-157.9241246, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 1.0001500600240096,1.0000002157496302, 1.0000000569893963
+INFO:root:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 3 WP
+INFO:root:Device mode = VehicleMode:AUTO.
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3210299, -157.9241571, 1, 19.995...
+INFO:__main__:Current altitude: 19.989
+INFO:__main__:Current lat: 21.32103
+INFO:root:Current lon: (-157.9241587, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9996999249812453,1.0000000046902051, 1.0000000101314455
+INFO:root:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 3 WP
+INFO:root:Device mode = VehicleMode:AUTO.
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3210394, -157.9241642, 1, 19.977...
+INFO:__main__:Current altitude: 19.98
+INFO:__main__:Current lat: 21.3210397
+INFO:root:Current lon: (-157.9241688, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 1.0001501726986033,1.0000000140706087, 1.0000000291279045
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 748, in <module>\n    conduct_mission()\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 661, in conduct_mission\n    determine_drone_actions((last_lat, last_lon), frm_display, target_sightings, x, y, radius)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 689, in determine_drone_actions\n    new_lat, new_lon = calc_new_location_to_target(last_obj_lat, last_obj_lon, last_obj_heading, distance)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 168, in calc_new_location_to_target\n    kilometers=(float(distance * .001))).destination(origin, heading)\n', "TypeError: unsupported operand type(s) for *: 'module' and 'float'\n"]

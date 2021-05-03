@@ -1,0 +1,52 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.021
+INFO:__main__:Current altitude: 0.524
+INFO:__main__:Current altitude: 0.988
+INFO:__main__:Current altitude: 2.052
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 3.057
+INFO:__main__:Current altitude: 4.123
+INFO:__main__:Current altitude: 4.673
+INFO:__main__:Current altitude: 5.839
+INFO:__main__:Current altitude: 7.372
+INFO:__main__:Current altitude: 8.154
+INFO:__main__:Current altitude: 9.743
+INFO:__main__:Current altitude: 10.541
+INFO:__main__:Current altitude: 12.149
+INFO:__main__:Current altitude: 12.964
+INFO:__main__:Current altitude: 14.588
+INFO:__main__:Current altitude: 15.405
+INFO:__main__:Current altitude: 16.99
+INFO:__main__:Current altitude: 17.709
+INFO:__main__:Current altitude: 18.823
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Starting camera feed...
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:autopilot:Reached command #3
+INFO:autopilot:Mission: 4 RTL
+INFO:autopilot:SIM Hit ground at 0.484720 m/s
+INFO:autopilot:Disarming motors

@@ -1,0 +1,67 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+DEBUG:dronekit:Still waiting for data from vehicle: parameters
+DEBUG:dronekit:Still waiting for data from vehicle: parameters
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.004
+INFO:__main__:Current altitude: 0.004
+INFO:__main__:Current altitude: 0.004
+INFO:__main__:Current altitude: 0.005
+INFO:__main__:Current altitude: 0.324
+INFO:__main__:Current altitude: 0.773
+INFO:__main__:Current altitude: 1.877
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.533
+INFO:__main__:Current altitude: 3.932
+INFO:__main__:Current altitude: 4.661
+INFO:__main__:Current altitude: 6.166
+INFO:__main__:Current altitude: 6.935
+INFO:__main__:Current altitude: 8.495
+INFO:__main__:Current altitude: 9.287
+INFO:__main__:Current altitude: 10.887
+INFO:__main__:Current altitude: 11.69
+INFO:__main__:Current altitude: 13.313
+INFO:__main__:Current altitude: 14.126
+INFO:__main__:Current altitude: 15.752
+INFO:__main__:Current altitude: 16.553
+INFO:__main__:Current altitude: 17.992
+INFO:__main__:Current altitude: 19.001
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3209747, -157.9239392, 1, 19.997...
+INFO:__main__:Current altitude: 20.0
+INFO:__main__:Current lat: 21.3209836
+INFO:root:Current lon: (-157.9239643, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 1.0001500225033755,1.0000004174293213, 1.0000001589372713
+INFO:root:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 3 WP
+INFO:root:Device mode = VehicleMode:AUTO.
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3210172, -157.9241333, 1, 20.002...
+INFO:__main__:Current altitude: 20.001
+INFO:__main__:Current lat: 21.3210261
+INFO:root:Current lon: (-157.9241518, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9999500049995002,1.0000004174284893, 1.000000117144857
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 744, in <module>\n    conduct_mission()\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 657, in conduct_mission\n    determine_drone_actions((last_lat, last_lon), frm_display, target_sightings, x, y, radius)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 686, in determine_drone_actions\n    new_lat, new_lon = get_new_lat_lon(last_obj_lat, last_obj_lon, last_obj_heading, distance)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 142, in get_new_lat_lon\n    heading = math.radians(heading)\n', 'TypeError: must be real number, not NoneType\n']

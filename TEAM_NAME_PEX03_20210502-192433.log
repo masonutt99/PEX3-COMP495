@@ -1,0 +1,510 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.012
+INFO:__main__:Current altitude: 0.205
+INFO:__main__:Current altitude: 0.872
+INFO:__main__:Current altitude: 1.701
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.678
+INFO:__main__:Current altitude: 3.723
+INFO:__main__:Current altitude: 4.817
+INFO:__main__:Current altitude: 5.942
+INFO:__main__:Current altitude: 7.592
+INFO:__main__:Current altitude: 8.377
+INFO:__main__:Current altitude: 9.967
+INFO:__main__:Current altitude: 10.764
+INFO:__main__:Current altitude: 12.382
+INFO:__main__:Current altitude: 13.192
+INFO:__main__:Current altitude: 14.821
+INFO:__main__:Current altitude: 15.635
+INFO:__main__:Current altitude: 17.206
+INFO:__main__:Current altitude: 17.897
+INFO:__main__:Current altitude: 18.944
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Starting camera feed...
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219974, lon -157.9239986, alt 19.888, heading 17.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219949, lon -157.9239991, alt 19.832, heading 17.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219929, lon -157.9239994, alt 19.786, heading 17.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219929, lon -157.9239994, alt 19.786, heading 17.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219929, lon -157.9239994, alt 19.786, heading 17.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219904, lon -157.9239999, alt 19.727, heading 17.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219904, lon -157.9239999, alt 19.727, heading 17.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219873, lon -157.9240004, alt 19.654, heading 25.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219873, lon -157.9240004, alt 19.654, heading 25.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219837, lon -157.9240011, alt 19.563, heading 40.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219837, lon -157.9240011, alt 19.563, heading 40.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219837, lon -157.9240011, alt 19.563, heading 59.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219837, lon -157.9240011, alt 19.563, heading 65.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219762, lon -157.9240027, alt 19.361, heading 71.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219762, lon -157.9240027, alt 19.361, heading 77.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219693, lon -157.9240042, alt 19.164, heading 89.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219693, lon -157.9240042, alt 19.164, heading 95.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219614, lon -157.9240058, alt 18.932, heading 101.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219614, lon -157.9240058, alt 18.932, heading 113.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219614, lon -157.9240058, alt 18.932, heading 125.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219526, lon -157.9240075, alt 18.67, heading 131.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219526, lon -157.9240075, alt 18.67, heading 143.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219328, lon -157.9240113, alt 18.094, heading 167.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219328, lon -157.9240113, alt 18.094, heading 184.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321922, lon -157.9240133, alt 17.791, heading 186.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321922, lon -157.9240133, alt 17.791, heading 186.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321922, lon -157.9240133, alt 17.791, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3219107, lon -157.9240153, alt 17.484, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218992, lon -157.9240172, alt 17.174, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218992, lon -157.9240172, alt 17.174, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218873, lon -157.9240191, alt 16.872, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218753, lon -157.9240211, alt 16.587, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218634, lon -157.924023, alt 16.315, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218634, lon -157.924023, alt 16.315, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218634, lon -157.924023, alt 16.315, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218516, lon -157.924025, alt 16.051, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218516, lon -157.924025, alt 16.051, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218399, lon -157.9240271, alt 15.791, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218282, lon -157.9240292, alt 15.532, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218282, lon -157.9240292, alt 15.532, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218282, lon -157.9240292, alt 15.532, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218282, lon -157.9240292, alt 15.532, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218167, lon -157.9240313, alt 15.276, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218167, lon -157.9240313, alt 15.276, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218053, lon -157.9240335, alt 15.024, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218053, lon -157.9240335, alt 15.024, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3218053, lon -157.9240335, alt 15.024, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321794, lon -157.9240356, alt 14.774, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321794, lon -157.9240356, alt 14.774, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321794, lon -157.9240356, alt 14.774, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217829, lon -157.9240378, alt 14.526, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217829, lon -157.9240378, alt 14.526, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217717, lon -157.92404, alt 14.278, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217717, lon -157.92404, alt 14.278, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217607, lon -157.9240421, alt 14.034, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217607, lon -157.9240421, alt 14.034, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217497, lon -157.9240443, alt 13.791, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217497, lon -157.9240443, alt 13.791, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217387, lon -157.9240464, alt 13.549, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217387, lon -157.9240464, alt 13.549, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217277, lon -157.9240486, alt 13.308, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217277, lon -157.9240486, alt 13.308, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217169, lon -157.9240507, alt 13.069, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217169, lon -157.9240507, alt 13.069, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217169, lon -157.9240507, alt 13.069, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217058, lon -157.9240528, alt 12.827, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217058, lon -157.9240528, alt 12.827, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217058, lon -157.9240528, alt 12.827, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3217058, lon -157.9240528, alt 12.827, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216949, lon -157.9240549, alt 12.589, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216949, lon -157.9240549, alt 12.589, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216949, lon -157.9240549, alt 12.589, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321684, lon -157.924057, alt 12.351, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321684, lon -157.924057, alt 12.351, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321684, lon -157.924057, alt 12.351, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216731, lon -157.9240591, alt 12.112, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216731, lon -157.9240591, alt 12.112, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216731, lon -157.9240591, alt 12.112, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216622, lon -157.9240612, alt 11.874, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216622, lon -157.9240612, alt 11.874, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216622, lon -157.9240612, alt 11.874, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216512, lon -157.9240632, alt 11.635, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216512, lon -157.9240632, alt 11.635, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216512, lon -157.9240632, alt 11.635, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216402, lon -157.9240653, alt 11.396, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216402, lon -157.9240653, alt 11.396, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216402, lon -157.9240653, alt 11.396, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216402, lon -157.9240653, alt 11.396, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216293, lon -157.9240673, alt 11.158, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216293, lon -157.9240673, alt 11.158, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216293, lon -157.9240673, alt 11.158, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216184, lon -157.9240694, alt 10.919, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216184, lon -157.9240694, alt 10.919, heading 189.
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216184, lon -157.9240694, alt 10.919, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216074, lon -157.9240714, alt 10.679, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216074, lon -157.9240714, alt 10.679, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216074, lon -157.9240714, alt 10.679, heading 189.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3216074, lon -157.9240714, alt 10.679, heading 190.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215964, lon -157.9240735, alt 10.467, heading 191.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215964, lon -157.9240735, alt 10.467, heading 192.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215964, lon -157.9240735, alt 10.467, heading 194.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321586, lon -157.9240757, alt 10.315, heading 196.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321586, lon -157.9240757, alt 10.315, heading 196.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321586, lon -157.9240757, alt 10.315, heading 200.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215765, lon -157.9240783, alt 10.213, heading 200.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215765, lon -157.9240783, alt 10.213, heading 200.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215765, lon -157.9240783, alt 10.213, heading 200.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.32157, lon -157.9240807, alt 10.161, heading 200.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.32157, lon -157.9240807, alt 10.161, heading 200.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215642, lon -157.9240835, alt 10.123, heading 217.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215642, lon -157.9240835, alt 10.123, heading 217.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215642, lon -157.9240835, alt 10.123, heading 217.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215591, lon -157.9240868, alt 10.095, heading 227.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215591, lon -157.9240868, alt 10.095, heading 227.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321555, lon -157.9240906, alt 10.074, heading 238.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321555, lon -157.9240906, alt 10.074, heading 238.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215518, lon -157.9240951, alt 10.058, heading 247.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215518, lon -157.9240951, alt 10.058, heading 247.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215518, lon -157.9240951, alt 10.058, heading 247.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215495, lon -157.9241002, alt 10.046, heading 255.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215495, lon -157.9241002, alt 10.046, heading 255.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215479, lon -157.924106, alt 10.036, heading 255.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215479, lon -157.924106, alt 10.036, heading 260.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215479, lon -157.924106, alt 10.036, heading 260.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321547, lon -157.9241124, alt 10.028, heading 263.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321547, lon -157.9241124, alt 10.028, heading 263.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215466, lon -157.9241196, alt 10.02, heading 265.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215466, lon -157.9241196, alt 10.02, heading 265.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215466, lon -157.9241196, alt 10.02, heading 265.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215466, lon -157.9241272, alt 10.014, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215466, lon -157.9241272, alt 10.014, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215469, lon -157.9241353, alt 10.009, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215469, lon -157.9241353, alt 10.009, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215473, lon -157.9241438, alt 10.004, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215473, lon -157.9241438, alt 10.004, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215478, lon -157.9241527, alt 10.001, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215478, lon -157.9241527, alt 10.001, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215483, lon -157.9241619, alt 9.998, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215483, lon -157.9241619, alt 9.998, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215488, lon -157.9241713, alt 9.996, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215488, lon -157.9241713, alt 9.996, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215492, lon -157.9241809, alt 9.994, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215492, lon -157.9241809, alt 9.994, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215495, lon -157.9241908, alt 9.994, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215495, lon -157.9241908, alt 9.994, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215497, lon -157.9242008, alt 9.994, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215497, lon -157.9242008, alt 9.994, heading 266.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9242108, alt 9.995, heading 267.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9242108, alt 9.995, heading 267.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9242209, alt 9.996, heading 267.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9242209, alt 9.996, heading 267.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9242311, alt 9.997, heading 267.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9242311, alt 9.997, heading 267.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9242414, alt 9.999, heading 267.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215497, lon -157.9242517, alt 10.0, heading 267.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215497, lon -157.9242517, alt 10.0, heading 268.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215496, lon -157.9242621, alt 10.002, heading 268.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215496, lon -157.9242621, alt 10.002, heading 268.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215494, lon -157.9242725, alt 10.003, heading 268.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215493, lon -157.9242832, alt 10.004, heading 268.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215493, lon -157.9242832, alt 10.004, heading 269.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215493, lon -157.9242938, alt 10.004, heading 269.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215493, lon -157.9242938, alt 10.004, heading 269.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215492, lon -157.9243044, alt 10.004, heading 269.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215492, lon -157.9243044, alt 10.004, heading 269.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215492, lon -157.924315, alt 10.005, heading 269.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215492, lon -157.924315, alt 10.005, heading 269.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215492, lon -157.924315, alt 10.005, heading 269.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215492, lon -157.924315, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215492, lon -157.9243341, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215492, lon -157.9243341, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215493, lon -157.9243484, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215493, lon -157.9243484, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215493, lon -157.9243484, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215494, lon -157.9243629, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215494, lon -157.9243629, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215494, lon -157.9243629, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215496, lon -157.9243775, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215496, lon -157.9243775, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215496, lon -157.9243775, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9243923, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9243923, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9243923, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215498, lon -157.9243923, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215501, lon -157.924407, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215501, lon -157.924407, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215501, lon -157.924407, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215504, lon -157.9244219, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215504, lon -157.9244219, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215504, lon -157.9244219, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215507, lon -157.9244368, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215507, lon -157.9244368, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215507, lon -157.9244368, alt 10.005, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321551, lon -157.9244517, alt 10.004, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321551, lon -157.9244517, alt 10.004, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321551, lon -157.9244517, alt 10.004, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.321551, lon -157.9244517, alt 10.004, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215514, lon -157.9244669, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215514, lon -157.9244669, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215514, lon -157.9244669, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215517, lon -157.924482, alt 10.003, heading 270.
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215517, lon -157.924482, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215517, lon -157.924482, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215521, lon -157.9244973, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215521, lon -157.9244973, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215521, lon -157.9244973, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215525, lon -157.9245123, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215525, lon -157.9245123, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215525, lon -157.9245123, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215528, lon -157.9245268, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215528, lon -157.9245268, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215528, lon -157.9245268, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215531, lon -157.9245404, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215531, lon -157.9245404, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215531, lon -157.9245404, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215531, lon -157.9245404, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215534, lon -157.9245532, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215534, lon -157.9245532, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215534, lon -157.9245532, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215536, lon -157.9245647, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215536, lon -157.9245647, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215536, lon -157.9245647, alt 10.003, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215537, lon -157.9245749, alt 10.002, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215537, lon -157.9245749, alt 10.002, heading 270.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215537, lon -157.9245749, alt 10.002, heading 271.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215538, lon -157.9245838, alt 10.001, heading 271.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215538, lon -157.9245838, alt 10.001, heading 272.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215539, lon -157.9245912, alt 10.0, heading 273.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215539, lon -157.9245912, alt 10.0, heading 275.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215539, lon -157.9245912, alt 10.0, heading 276.
+INFO:root:(Potential) target acquired @((0, 0)) with radius None.
+INFO:root:Locking in on lat 21.3215542, lon -157.9245971, alt 9.998, heading 276.

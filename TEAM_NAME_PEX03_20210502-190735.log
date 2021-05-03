@@ -1,0 +1,43 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.006
+INFO:__main__:Current altitude: 0.007
+INFO:__main__:Current altitude: 0.007
+INFO:__main__:Current altitude: 0.01
+INFO:__main__:Current altitude: 0.194
+INFO:__main__:Current altitude: 0.854
+INFO:__main__:Current altitude: 1.676
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.643
+INFO:__main__:Current altitude: 3.579
+INFO:__main__:Current altitude: 5.043
+INFO:__main__:Current altitude: 5.795
+INFO:__main__:Current altitude: 7.331
+INFO:__main__:Current altitude: 8.116
+INFO:__main__:Current altitude: 9.691
+INFO:__main__:Current altitude: 10.488
+INFO:__main__:Current altitude: 12.103
+INFO:__main__:Current altitude: 12.911
+INFO:__main__:Current altitude: 14.535
+INFO:__main__:Current altitude: 15.355
+INFO:__main__:Current altitude: 16.945
+INFO:__main__:Current altitude: 17.666
+INFO:__main__:Current altitude: 18.792
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 604, in <module>\n    backup_prev_experiment(IMG_SNAPSHOT_PATH)\n', "NameError: name 'IMG_SNAPSHOT_PATH' is not defined\n"]

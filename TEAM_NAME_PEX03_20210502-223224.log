@@ -1,0 +1,54 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.006
+INFO:__main__:Current altitude: 0.006
+INFO:__main__:Current altitude: 0.007
+INFO:__main__:Current altitude: 0.018
+INFO:__main__:Current altitude: 0.503
+INFO:__main__:Current altitude: 0.967
+INFO:__main__:Current altitude: 2.14
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.802
+INFO:__main__:Current altitude: 4.213
+INFO:__main__:Current altitude: 4.952
+INFO:__main__:Current altitude: 6.465
+INFO:__main__:Current altitude: 7.235
+INFO:__main__:Current altitude: 8.797
+INFO:__main__:Current altitude: 9.597
+INFO:__main__:Current altitude: 11.197
+INFO:__main__:Current altitude: 12.001
+INFO:__main__:Current altitude: 13.624
+INFO:__main__:Current altitude: 14.439
+INFO:__main__:Current altitude: 16.066
+INFO:__main__:Current altitude: 16.854
+INFO:__main__:Current altitude: 18.226
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.321019, -157.9240586, 1, 10.0...
+INFO:__main__:Current altitude: 10.0
+INFO:__main__:Current lat: 21.3210293
+INFO:root:Current lon: (-157.9240856, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 1.0,1.000000483091357, 1.0000001709682504
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 725, in <module>\n    conduct_mission()\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 639, in conduct_mission\n    determine_drone_actions((last_lat, last_lon), frm_display, target_sightings)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 664, in determine_drone_actions\n    hypo = get_hypotenuse(frame)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 644, in get_hypotenuse\n    num_pixels = cv2.countNonZero(thresh)\n', "cv2.error: OpenCV(4.4.0) /tmp/build_opencv/opencv/modules/core/src/count_non_zero.dispatch.cpp:130: error: (-215:Assertion failed) cn == 1 in function 'countNonZero'\n\n"]

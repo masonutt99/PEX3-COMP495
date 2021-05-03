@@ -1,0 +1,43 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.013
+INFO:__main__:Current altitude: 0.387
+INFO:__main__:Current altitude: 0.837
+INFO:__main__:Current altitude: 1.963
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 2.618
+INFO:__main__:Current altitude: 4.026
+INFO:__main__:Current altitude: 4.757
+INFO:__main__:Current altitude: 6.269
+INFO:__main__:Current altitude: 7.04
+INFO:__main__:Current altitude: 8.601
+INFO:__main__:Current altitude: 9.391
+INFO:__main__:Current altitude: 10.993
+INFO:__main__:Current altitude: 11.797
+INFO:__main__:Current altitude: 13.416
+INFO:__main__:Current altitude: 14.226
+INFO:__main__:Current altitude: 15.049
+INFO:__main__:Current altitude: 16.765
+INFO:__main__:Current altitude: 17.842
+INFO:__main__:Current altitude: 18.687
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/usr/lib/python3.6/pathlib.py", line 1248, in mkdir\n    self._accessor.mkdir(self, mode)\n', '  File "/usr/lib/python3.6/pathlib.py", line 387, in wrapped\n    return strfunc(str(pathobj), *args)\n', "FileNotFoundError: [Errno 2] No such file or directory: '/dev/drone_data/mission_data/cam_pex003'\n", '\nDuring handling of the above exception, another exception occurred:\n\n', 'Traceback (most recent call last):\n', '  File "/usr/lib/python3.6/pathlib.py", line 1248, in mkdir\n    self._accessor.mkdir(self, mode)\n', '  File "/usr/lib/python3.6/pathlib.py", line 387, in wrapped\n    return strfunc(str(pathobj), *args)\n', "FileNotFoundError: [Errno 2] No such file or directory: '/dev/drone_data/mission_data'\n", '\nDuring handling of the above exception, another exception occurred:\n\n', 'Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 604, in <module>\n    backup_prev_experiment(IMG_SNAPSHOT_PATH)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 423, in backup_prev_experiment\n    Path(path).mkdir(parents=True, exist_ok=True)\n', '  File "/usr/lib/python3.6/pathlib.py", line 1252, in mkdir\n    self.parent.mkdir(parents=True, exist_ok=True)\n', '  File "/usr/lib/python3.6/pathlib.py", line 1252, in mkdir\n    self.parent.mkdir(parents=True, exist_ok=True)\n', '  File "/usr/lib/python3.6/pathlib.py", line 1248, in mkdir\n    self._accessor.mkdir(self, mode)\n', '  File "/usr/lib/python3.6/pathlib.py", line 387, in wrapped\n    return strfunc(str(pathobj), *args)\n', "PermissionError: [Errno 13] Permission denied: '/dev/drone_data'\n"]

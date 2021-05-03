@@ -1,0 +1,54 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.008
+INFO:__main__:Current altitude: 0.021
+INFO:__main__:Current altitude: 0.283
+INFO:__main__:Current altitude: 0.963
+INFO:__main__:Current altitude: 1.815
+INFO:__main__:Current altitude: 2.804
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 3.859
+INFO:__main__:Current altitude: 4.956
+INFO:__main__:Current altitude: 6.089
+INFO:__main__:Current altitude: 7.251
+INFO:__main__:Current altitude: 8.781
+INFO:__main__:Current altitude: 9.574
+INFO:__main__:Current altitude: 11.171
+INFO:__main__:Current altitude: 11.975
+INFO:__main__:Current altitude: 13.599
+INFO:__main__:Current altitude: 14.413
+INFO:__main__:Current altitude: 16.038
+INFO:__main__:Current altitude: 16.822
+INFO:__main__:Current altitude: 18.2
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.321024, -157.9240753, 1, 10.002...
+INFO:__main__:Current altitude: 10.001
+INFO:__main__:Current lat: 21.321032
+INFO:root:Current lon: (-157.9240962, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9999000199960006,1.0000003752164999, 1.0000001323420762
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 690, in <module>\n    conduct_mission()\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 600, in conduct_mission\n    if (x + (x + radius) / 2) < (FRAME_WIDTH / 2):\n', "TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'\n"]

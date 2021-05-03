@@ -1,0 +1,49 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-4.1.0-dev0, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Switching to GUIDED mode...
+INFO:__main__:Waiting for arm...
+INFO:autopilot:Arming motors
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.009
+INFO:__main__:Current altitude: 0.014
+INFO:__main__:Current altitude: 0.436
+INFO:__main__:Current altitude: 0.898
+INFO:__main__:Current altitude: 2.04
+INFO:__main__:Current altitude: 2.695
+INFO:autopilot:EKF2 IMU0 in-flight yaw alignment complete
+INFO:autopilot:EKF2 IMU1 in-flight yaw alignment complete
+INFO:__main__:Current altitude: 4.238
+INFO:__main__:Current altitude: 5.348
+INFO:__main__:Current altitude: 6.496
+INFO:__main__:Current altitude: 7.66
+INFO:__main__:Current altitude: 8.837
+INFO:__main__:Current altitude: 10.027
+INFO:__main__:Current altitude: 11.238
+INFO:__main__:Current altitude: 12.448
+INFO:__main__:Current altitude: 13.662
+INFO:__main__:Current altitude: 14.883
+INFO:__main__:Current altitude: 16.11
+INFO:__main__:Current altitude: 17.266
+INFO:__main__:Current altitude: 17.786
+INFO:__main__:Current altitude: 18.654
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 1 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:autopilot:Reached command #1
+INFO:autopilot:Mission: 2 WP
+INFO:autopilot:Reached command #2
+INFO:autopilot:Mission: 3 WP
+INFO:autopilot:Reached command #3
+INFO:autopilot:Mission: 4 RTL
