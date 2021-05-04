@@ -465,6 +465,8 @@ def conduct_mission():
     object_identified = False
 
     movements = 0
+    withinX = 0
+    withinY = 0
 
     while drone.armed:
         # Start timer
@@ -506,21 +508,34 @@ def conduct_mission():
                 drone_lib.change_device_mode(drone, "GUIDED")
             center, confidence, (x, y), radius, frm_display, bbox \
                 = track_with_confirm(frm_display)
-            if movements < 45:
-                if (bbox[0] + int(bbox[2]/2)) < (FRAME_WIDTH / 2):
-                    drone_lib.small_move_left(drone)
-                    movements = movements + 1
+            if withinX < 5 and withinY < 5:
+                if (center[0]) < (FRAME_WIDTH / 2):
+                    if (center[0]) < (FRAME_WIDTH / 2)-15:
+                        drone_lib.small_move_left(drone)
+                        movements = movements + 1
+                    else:
+                        withinX = withinX + 1
                 else:
-                    drone_lib.small_move_right(drone)
-                    movements = movements + 1
-                if (bbox[1] + int(bbox[3]/2)) > (FRAME_HEIGHT / 2):
-                    drone_lib.small_move_back(drone)
-                    movements = movements + 1
+                    if (center[0]) > (FRAME_WIDTH / 2):
+                        if (center[0]) > (FRAME_WIDTH / 2)+15:
+                            drone_lib.small_move_right(drone)
+                            movements = movements + 1
+                        else:
+                            withinX = withinX + 1
+                if (center[1]) > (FRAME_HEIGHT / 2):
+                    if (center[1]) > (FRAME_HEIGHT / 2) + 15:
+                        drone_lib.small_move_back(drone)
+                        movements = movements + 1
+                    else:
+                        withinY = withinY + 1
                 else:
-                    drone_lib.small_move_forward(drone)
-                    movements = movements + 1
-
-            target_sightings = target_sightings + 1
+                    if (center[1]) < (FRAME_HEIGHT / 2) - 15:
+                        drone_lib.small_move_forward(drone)
+                        movements = movements + 1
+                    else:
+                        withinY = withinY + 1
+            else:
+                target_sightings = target_sightings + 1
 
             last_obj_lon = last_lon
             last_obj_lat = last_lat
@@ -532,6 +547,8 @@ def conduct_mission():
                             (0, 0, 255), 2)
                 target_sightings = 0
                 movements = 0
+                withinX = 0
+                withinY = 0
                 object_identified = False
 
         # Calculate Frames per second (FPS)
@@ -572,7 +589,7 @@ def get_hypotenuse(img, bbox):
 
     # dist_ratio = .16795
     pix_ratio = .01065
-    hypo = num_pixels * (pix_ratio * dist_ratio1 )
+    hypo = num_pixels * (pix_ratio * dist_ratio1)
     return hypo
 
 
@@ -593,13 +610,13 @@ def determine_drone_actions(last_point, frame, target_sightings, bbox):
         print("hypo")
         print(hypo)
         # hypo = 1.5*drone.location.global_relative_frame.alt
-        distance = get_ground_distance(drone.location.global_relative_frame.alt, hypo)
+        # distance = get_ground_distance(drone.location.global_relative_frame.alt, hypo)
 
         print("distance")
-        print(distance)
+        print(hypo)
         # new_lat, new_lon = calc_new_location_to_target(last_obj_lat, last_obj_lon, last_obj_heading, distance)
-        new_lat, new_lon = get_new_lat_lon(last_obj_lat, last_obj_lon, last_obj_heading, distance)
-        drone_lib.goto_point(drone, new_lat, new_lon, speed=.2, alt=3)
+        new_lat, new_lon = get_new_lat_lon(last_obj_lat, last_obj_lon, last_obj_heading, hypo)
+        drone_lib.goto_point(drone, new_lat, new_lon, speed=.5, alt=5)
         # drone_lib.change_device_mode(drone, "LOITER")
 
 #
