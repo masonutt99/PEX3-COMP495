@@ -1,0 +1,67 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 26.87
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 3 WP
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3212604, -157.9239861, 1, 26.276...
+INFO:__main__:Current altitude: 25.943
+INFO:__main__:Current lat: 21.3212667
+INFO:root:Current lon: (-157.9240192, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9873268381793272,1.0000002954797174, 1.0000002095945069
+INFO:__main__:Current altitude: 25.783
+INFO:__main__:Current lat: 21.3212731
+INFO:root:Current lon: (-157.9240509, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9812376312985234,1.0000005956495892, 1.0000004103239895
+INFO:__main__:Current altitude: 25.739
+INFO:__main__:Current lat: 21.321277
+INFO:root:Current lon: (-157.92407, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9795630994063024,1.0000007785656049, 1.0000005312682516
+INFO:__main__:Current altitude: 25.727
+INFO:__main__:Current lat: 21.3212774
+INFO:root:Current lon: (-157.9240726, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.979106408890242,1.000000797326222, 1.0000005477318685
+INFO:__main__:Current altitude: 25.769
+INFO:__main__:Current lat: 21.3212756
+INFO:root:Current lon: (-157.9240623, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.980704825696453,1.0000007129034454, 1.0000004825106172
+INFO:__main__:Current altitude: 25.829
+INFO:__main__:Current lat: 21.3212728
+INFO:root:Current lon: (-157.9240485, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9829882782767545,1.0000005815791264, 1.0000003951268046
+INFO:__main__:Current altitude: 25.891
+INFO:__main__:Current lat: 21.3212706
+INFO:root:Current lon: (-157.9240391, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9853478459430659,1.000000478395733, 1.0000003356044973
+INFO:__main__:Current altitude: 25.951
+INFO:__main__:Current lat: 21.3212694
+INFO:root:Current lon: (-157.9240321, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9876312985233674,1.000000422113882, 1.0000002912793753
+INFO:__main__:Current altitude: 26.009
+INFO:__main__:Current lat: 21.3212683
+INFO:root:Current lon: (-157.9240241, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9898386360176588,1.0000003705221854, 1.0000002406220925
+INFO:__main__:Current altitude: 26.065
+INFO:__main__:Current lat: 21.3212667
+INFO:root:Current lon: (-157.9240149, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9919698584259401,1.0000002954797174, 1.0000001823662175
+INFO:__main__:Goto point: 21.3212667, -157.9240149, 1, 26.065...
+INFO:__main__:Current altitude: 26.084
+INFO:__main__:Current lat: 21.3212661
+INFO:root:Current lon: (-157.9240117, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 1.0007289468636102,0.9999999718590828, 0.9999999797370905
+INFO:__main__:Yaw to None degrees (relative = True).
+INFO:__main__:Program exception: ['Traceback (most recent call last):\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 685, in <module>\n    conduct_mission()\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/mission.py", line 514, in conduct_mission\n    drone_lib.condition_yaw(drone, last_obj_heading, True, log=log)\n', '  File "/home/usafa/PycharmProjects/USAFA/PEX3-COMP495/drone_lib.py", line 94, in condition_yaw\n    device.send_mavlink(msg)\n', '  File "/usr/local/lib/python3.6/dist-packages/dronekit/__init__.py", line 2215, in send_mavlink\n    self._master.mav.send(message)\n', '  File "/home/usafa/.local/lib/python3.6/site-packages/pymavlink/dialects/v20/ardupilotmega.py", line 15046, in send\n    buf = mavmsg.pack(self, force_mavlink1=force_mavlink1)\n', '  File "/home/usafa/.local/lib/python3.6/site-packages/pymavlink/dialects/v20/ardupilotmega.py", line 10193, in pack\n    return MAVLink_message.pack(self, mav, 152, struct.pack(\'<fffffffHBBB\', self.param1, self.param2, self.param3, self.param4, self.param5, self.param6, self.param7, self.command, self.target_system, self.target_component, self.confirmation), force_mavlink1=force_mavlink1)\n', 'struct.error: required argument is not a float\n']

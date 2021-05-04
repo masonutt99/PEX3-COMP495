@@ -1,0 +1,46 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 24.318
+INFO:__main__:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 4 RTL
+INFO:__main__:Device mode = VehicleMode:AUTO.
+INFO:__main__:backing up old images...
+INFO:root:Searching for target...
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3214488, -157.923872, 1, 24.308...
+INFO:__main__:Current altitude: 24.308
+INFO:__main__:Current lat: 21.3214286
+INFO:root:Current lon: (-157.9238618, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 1.0,0.9999990525972139, 0.999999935411918
+INFO:root:Changing device mode from VehicleMode:GUIDED to AUTO...
+INFO:autopilot:Mission: 4 RTL
+INFO:root:Device mode = VehicleMode:AUTO.
+INFO:root:Changing device mode from VehicleMode:AUTO to GUIDED...
+INFO:root:Device mode = VehicleMode:GUIDED.
+INFO:__main__:Goto point: 21.3213659, -157.9238294, 1, 3.255...
+INFO:__main__:Current altitude: 2.955
+INFO:__main__:Current lat: 21.3213659
+INFO:root:Current lon: (-157.9238295, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9078341013824885,1.0, 1.0000000006332168
+INFO:__main__:Current altitude: 2.924
+INFO:__main__:Current lat: 21.3213658
+INFO:root:Current lon: (-157.9238293, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.8983102918586789,0.9999999953098689, 0.9999999993667834
+INFO:__main__:Current altitude: 3.167
+INFO:__main__:Current lat: 21.3213653
+INFO:root:Current lon: (-157.9238284, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9729646697388633,0.9999999718592137, 0.9999999936678334
+INFO:__main__:Current altitude: 3.232
+INFO:__main__:Current lat: 21.321365
+INFO:root:Current lon: (-157.9238278, <Logger __main__ (DEBUG)>)
+INFO:__main__:Relative position to destination: 0.9929339477726575,0.9999999577888207, 0.9999999898685334

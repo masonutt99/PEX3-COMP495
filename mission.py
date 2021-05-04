@@ -139,7 +139,7 @@ def create_tracker(tracker_type='CSRT'):
 
 def get_new_lat_lon(from_lat, from_lon, heading, distance):
     earthRadius = 6378.1
-    heading = math.radians(last_obj_heading)
+    heading = math.radians(heading)
 
     lat1 = math.radians(from_lat)
     lon1 = math.radians(from_lon)
@@ -508,35 +508,10 @@ def conduct_mission():
                 drone_lib.change_device_mode(drone, "GUIDED")
             center, confidence, (x, y), radius, frm_display, bbox \
                 = track_with_confirm(frm_display)
-            if withinX < 5 and withinY < 5:
-                if (center[0]) < (FRAME_WIDTH / 2):
-                    if (center[0]) < (FRAME_WIDTH / 2)-15:
-                        drone_lib.small_move_left(drone)
-                        movements = movements + 1
-                    else:
-                        withinX = withinX + 1
-                else:
-                    if (center[0]) > (FRAME_WIDTH / 2):
-                        if (center[0]) > (FRAME_WIDTH / 2)+15:
-                            drone_lib.small_move_right(drone)
-                            movements = movements + 1
-                        else:
-                            withinX = withinX + 1
-                if (center[1]) > (FRAME_HEIGHT / 2):
-                    if (center[1]) > (FRAME_HEIGHT / 2) + 15:
-                        drone_lib.small_move_back(drone)
-                        movements = movements + 1
-                    else:
-                        withinY = withinY + 1
-                else:
-                    if (center[1]) < (FRAME_HEIGHT / 2) - 15:
-                        drone_lib.small_move_forward(drone)
-                        movements = movements + 1
-                    else:
-                        withinY = withinY + 1
-            else:
-                target_sightings = target_sightings + 1
-
+            target_sightings = target_sightings + 1
+            if target_sightings <= 1:
+                drone_lib.goto_point(drone, last_lat, last_lon, 1, last_alt, log=log)
+                drone_lib.condition_yaw(drone, last_heading, relative=False, log=log)
             last_obj_lon = last_lon
             last_obj_lat = last_lat
             last_obj_alt = last_alt
@@ -564,6 +539,38 @@ def conduct_mission():
         if key == ord("q"):
             break
         if target_sightings > 60:
+            while withinY < 5 and withinX < 5:
+                frame = get_cur_frame()
+                frm_display = frame.copy()
+                center, confidence, (x, y), radius, frm_display, bbox \
+                    = track_with_confirm(frm_display)
+                cv2.imshow("Real-time Detect", frm_display)
+                if (center[0]) > (FRAME_WIDTH / 2):
+                    if (center[0]) > (FRAME_WIDTH / 2)+15:
+                        drone_lib.small_move_right(drone)
+                        movements = movements + 1
+                    else:
+                        withinX = withinX + 1
+                else:
+                    if (center[0]) < (FRAME_WIDTH / 2):
+                        if (center[0]) < (FRAME_WIDTH / 2)-15:
+                            drone_lib.small_move_left(drone)
+                            movements = movements + 1
+                        else:
+                            withinX = withinX + 1
+                if (center[1]) > (FRAME_HEIGHT / 2):
+                    if (center[1]) > (FRAME_HEIGHT / 2) + 15:
+                        drone_lib.small_move_back(drone)
+                        movements = movements + 1
+                    else:
+                        withinY = withinY + 1
+                else:
+                    if (center[1]) < (FRAME_HEIGHT / 2) - 15:
+                        drone_lib.small_move_forward(drone)
+                        movements = movements + 1
+                    else:
+                        withinY = withinY + 1
+
             determine_drone_actions((last_lat, last_lon), frm_display, target_sightings, ogbbox)
             break
 
@@ -614,8 +621,10 @@ def determine_drone_actions(last_point, frame, target_sightings, bbox):
 
         print("distance")
         print(hypo)
-        # new_lat, new_lon = calc_new_location_to_target(last_obj_lat, last_obj_lon, last_obj_heading, distance)
-        new_lat, new_lon = get_new_lat_lon(last_obj_lat, last_obj_lon, last_obj_heading, hypo)
+        if drone.rangefinder.distance:
+            new_lat, new_lon = calc_new_location_to_target(last_obj_lat, last_obj_lon, drone.heading, distance=drone.rangefinder.distance)
+        else:
+            new_lat, new_lon = get_new_lat_lon(last_obj_lat, last_obj_lon, drone.heading, hypo)
         drone_lib.goto_point(drone, new_lat, new_lon, speed=.5, alt=5)
         # drone_lib.change_device_mode(drone, "LOITER")
 

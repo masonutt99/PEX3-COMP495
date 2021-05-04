@@ -1,0 +1,28 @@
+INFO:__main__:PEX 03 start.
+INFO:__main__:Connecting to device...
+INFO:autopilot:ArduCopter V4.1.0-dev (428c9ef0)
+INFO:autopilot:a3d9197b765643568af09eb2bd3e5ce7
+INFO:autopilot:Frame: QUAD
+INFO:__main__:Device connected.
+INFO:root:Device version: APM:Copter-None.None.NoneUnknownReleaseType, log=
+INFO:__main__:Looking for mission to execute...
+INFO:__main__:Arming device...
+INFO:__main__:Device armed: True.
+INFO:__main__:Device takeoff...
+INFO:__main__:Current altitude: 17.112
+INFO:__main__:Current altitude: 17.112
+INFO:__main__:Current altitude: 17.112
+INFO:__main__:Current altitude: 17.113
+INFO:__main__:Current altitude: 17.112
+INFO:__main__:Current altitude: 17.112
+INFO:__main__:Current altitude: 17.112
+INFO:__main__:Current altitude: 17.112
+INFO:__main__:Current altitude: 17.113
+INFO:__main__:Current altitude: 17.113
+INFO:__main__:Current altitude: 17.113
+INFO:__main__:Current altitude: 17.113
+INFO:__main__:Current altitude: 17.114
+INFO:__main__:Current altitude: 17.113
+INFO:__main__:Current altitude: 17.113
+INFO:__main__:Current altitude: 17.113
+INFO:__main__:Current altitude: 17.112
