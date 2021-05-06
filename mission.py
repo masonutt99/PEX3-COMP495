@@ -499,6 +499,8 @@ def conduct_mission():
                 if drone.mode != "GUIDED":
                     drone_lib.change_device_mode(drone, "GUIDED")
                 # while drone.location.global_relative_frame.lat != last_lat and drone.location.global_relative_frame.lon != last_lon:
+
+                ##NEED TO MAKE SURE LAST_ALT is giving the correct alt (tried setting to 22 didn't work on the new mission)
                 drone_lib.goto_point(drone, last_lat, last_lon, 1, last_alt, log=log)
                 ogbbox = bbox
         else:
@@ -511,7 +513,8 @@ def conduct_mission():
             target_sightings = target_sightings + 1
             if target_sightings <= 1:
                 drone_lib.goto_point(drone, last_lat, last_lon, 1, last_alt, log=log)
-                drone_lib.condition_yaw(drone, last_heading, relative=False, log=log)
+                # FoundOnce = True
+                # drone_lib.condition_yaw(drone, last_heading, relative=False, log=log)
             last_obj_lon = last_lon
             last_obj_lat = last_lat
             last_obj_alt = last_alt
@@ -577,6 +580,8 @@ def conduct_mission():
     # while True:
     # drone_lib.goto_point(drone, drone.location.global_relative_frame.lat, drone.location.global_relative_frame.lon, speed=.2, alt=8)
     time.sleep(2)
+
+    #this allows the drone to slow and stabalize before lowering again and releasing the package
     drone_lib.goto_point(drone,  drone.location.global_relative_frame.lat, drone.location.global_relative_frame.lon, speed=.1, alt=2.5)
     release_grip(2)
 
@@ -621,10 +626,10 @@ def determine_drone_actions(last_point, frame, target_sightings, bbox):
 
         print("distance")
         print(hypo)
-        if drone.rangefinder.distance:
-            new_lat, new_lon = calc_new_location_to_target(last_obj_lat, last_obj_lon, drone.heading, distance=drone.rangefinder.distance)
-        else:
-            new_lat, new_lon = get_new_lat_lon(last_obj_lat, last_obj_lon, drone.heading, hypo)
+        # if drone.rangefinder.distance:
+        #     new_lat, new_lon = calc_new_location_to_target(last_obj_lat, last_obj_lon, drone.heading, distance=drone.rangefinder.distance)
+        # else:
+        new_lat, new_lon = get_new_lat_lon(last_obj_lat, last_obj_lon, drone.heading, hypo)
         drone_lib.goto_point(drone, new_lat, new_lon, speed=.5, alt=5)
         # drone_lib.change_device_mode(drone, "LOITER")
 

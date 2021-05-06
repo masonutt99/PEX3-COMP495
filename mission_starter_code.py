@@ -19,6 +19,8 @@ import os
 import glob
 import shutil
 from pathlib import Path
+import object_tracking
+
 
 import fg_camera_sim
 import yolo_visdrone.yolo_realsense
@@ -229,47 +231,9 @@ def calc_new_location_to_target(from_lat, from_lon, heading, distance):
     return destination.latitude, destination.longitude
 
 
-def check_for_initial_target(frame_display, net, classes):
-
-    myColor = (20, 20, 230)
-
-    blob = cv2.dnn.blobFromImage(frame_display, 0.00392, (192, 192), swapRB=False, crop=False)
-
-    net.setInput(blob)
-    layer_outputs = net.forward(output_layers)
-
-    class_ids, confidences, b_boxes = [], [], []
-    for output in layer_outputs:
-        for detection in output:
-            scores = detection[5:]
-            class_id = np.argmax(scores)
-            confidence = scores[class_id]
-            if confidence > CONF_THRESH:
-                center_x, center_y, w, h = \
-                    (detection[0:4] * np.array([frame_w, frame_h, frame_w, frame_h])).astype('int')
-                x = int(center_x - w / 2)
-                y = int(center_y - h / 2)
-
-                b_boxes.append([x, y, int(w), int(h)])
-                confidences.append(float(confidence))
-                class_ids.append(int(class_id))
-            else:
-                center_x = 0
-                center_y = 0
-                x = 0
-                y = 0
-    # center = None
-    # confidence = None
-    # x = 0
-    # y = 0
-    radius = 10
-    # frame_display = frame_display
-    # bbox = 0
-    return (center_x, center_y), confidence, (x, y), radius, frame_display, b_boxes
-
-
-
-    return None
+# def check_for_initial_target():
+#
+#     return None
 
 def determine_drone_actions(last_point, frame, target_sightings):
     return
@@ -309,7 +273,7 @@ def conduct_mission():
         if not object_identified:
             # look for a target in current frame
             center, confidence, (x, y), radius, frame_display, bbox \
-                = check_for_initial_target(frame_display, net, classes)
+                = object_tracking.check_for_initial_target(frame_display)
             object_identified = True
 
             if not confidence:
