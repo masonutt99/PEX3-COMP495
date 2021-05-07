@@ -477,7 +477,7 @@ def conduct_mission():
         last_lon = location.lon
         last_lat = location.lat
         # Shouldn't need to change the altitude until it finds the target, the mission should set it to the right height, and then when it is found it should descend
-        # last_alt = last_alt
+        last_alt = location.alt
         last_heading = drone.heading
 
         timer = cv2.getTickCount()
