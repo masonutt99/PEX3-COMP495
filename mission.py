@@ -473,7 +473,7 @@ def conduct_mission():
         location = drone.location.global_relative_frame
         last_lon = location.lon
         last_lat = location.lat
-        last_alt = location.alt
+        last_alt = last_alt
         last_heading = drone.heading
 
         timer = cv2.getTickCount()
