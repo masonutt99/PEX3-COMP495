@@ -459,6 +459,9 @@ def conduct_mission():
         last_obj_lat, last_obj_alt, \
         last_obj_heading, target_circle_radius
 
+    # Setting this outside the loop should set it once and let it keep the same alt
+    last_alt = last_obj_alt
+    
     # init video
     start_camera_stream()
     load_visdrone_network()
@@ -473,7 +476,8 @@ def conduct_mission():
         location = drone.location.global_relative_frame
         last_lon = location.lon
         last_lat = location.lat
-        last_alt = last_alt
+        # Shouldn't need to change the altitude until it finds the target, the mission should set it to the right height, and then when it is found it should descend
+        # last_alt = last_alt
         last_heading = drone.heading
 
         timer = cv2.getTickCount()
